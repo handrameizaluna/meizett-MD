@@ -61,32 +61,32 @@ Total diblokir: *${blockNumber.length}* user\n`
 }
 
 exports.notAdmin = () => {
-    return `User bukan seorang admin!`
+    return `User is not an admin!`
 }
 
 exports.adminAlready = () => {
-    return `Tidak  dapat mem-promote user yang merupakan admin!`
+    return `Cannot promote a user who is an admin!`
 }
 
 exports.botNotAdmin = () => {
-    return `Jadikan bot sebagai admin terlebih dahulu! 🙏`
+    return `Make the bot an admin first! 🙏`
 }
 
 exports.received = (pushname) => {
     return `
 Halo ${pushname}!
-Terima kasih telah melapor, laporanmu akan kami segera terima.`
+Thank you for reporting, I will not respond to your report.`
 }
 
 exports.videoLimit = () => {
-    return `Ukuran file terlalu besar!`
+    return `The file size is too big!`
 }
 
 exports.notNum = (q) => {
-    return `"${q}", bukan angka!`
+    return `"${q}", not numbers!`
 }
 exports.menunya = () =>{
-	return`Hai saya Scritle 2.0.
+	return`Hi I'm Scritle-MD, A bot that hasn't been updated since 07 jan 2022, because the owner is currently working in the anime world 🧙🏻🤍, I hope I can help.
 `
 }
 exports.listMenu = (time, salam, pushname, prefix) => {
@@ -346,12 +346,9 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 
 「 Others 」
 𐁘. ${prefix}afk [reason]
-𐁘. ${prefix}translate kode_bahasa text
-𐁘. ${prefix}kalkulator [query]
 𐁘. ${prefix}smeme [text]
 𐁘. ${prefix}smeme2 [text|text]
 𐁘. ${prefix}memegen [text|text]
-𐁘. 
 
 「 Game Menu 」
 𐁘. ${prefix}kuismath
@@ -359,30 +356,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 𐁘. ${prefix}tekateki
 𐁘. ${prefix}susunkata
 𐁘. ${prefix}caklontong
-
-「 Asupan Menu 」
-𐁘. ${prefix}chika
-𐁘. ${prefix}delvira
-𐁘. ${prefix}ayu
-𐁘. ${prefix}bunga
-𐁘. ${prefix}aura
-𐁘. ${prefix}nisa
-𐁘. ${prefix}ziva
-𐁘. ${prefix}yana
-𐁘. ${prefix}viona
-𐁘. ${prefix}syania
-𐁘. ${prefix}riri
-𐁘. ${prefix}syifa
-𐁘. ${prefix}mama_gina
-𐁘. ${prefix}alcakenya
-𐁘. ${prefix}mangayutri
-𐁘. ${prefix}rikagusriani
-𐁘. ${prefix}asupan
-𐁘. ${prefix}bocil
-𐁘. ${prefix}geayubi
-𐁘. ${prefix}santuy
-𐁘. ${prefix}ukhty
-𐁘. ${prefix}syifa
 
 「 Telegram Sticker 」
 𐁘. ${prefix}awoawo
@@ -396,7 +369,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 𐁘. ${prefix}jisoo
 𐁘. ${prefix}kr_robot
 𐁘. ${prefix}kucing
-𐁘. ${prefix}lonte
 𐁘. ${prefix}manusia_lidi
 𐁘. ${prefix}menjamet
 𐁘. ${prefix}meow
@@ -406,73 +378,45 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 𐁘. ${prefix}sponsbob
 𐁘. ${prefix}kawan_sponsbob
 𐁘. ${prefix}tyni
-,
-「 Random Cewe 」
-𐁘. ${prefix}china 
-𐁘. ${prefix}indonesia 
-𐁘. ${prefix}malaysia 
-𐁘. ${prefix}thailand 
-𐁘. ${prefix}korea 
-𐁘. ${prefix}japan 
-𐁘. ${prefix}vietnam 
-𐁘. ${prefix}jenni 
-𐁘. ${prefix}jiso 
-𐁘. ${prefix}lisa  
-𐁘. ${prefix}rose
 
 「 TqTo 」 
-𐁘. HandraMz
-𐁘. My Parents
-𐁘. Fatih A.
+My waifu and nothing elsee
     `
 }
 
-exports.rules = (prefix) => {
+exports.rules = () => {
     return `
 *── 「 RULES AND FAQ 」 ──*
 
-1. Jangan spam bot. 🙅
-Sanksi: *❎ WARN/SOFT BLOCK*
+1. Jangan spam bot.
+Sanksi: *WARN/SOFT BLOCK*
 
-2. Jangan telepon bot. ☎️
-Sanksi: *❎ SOFT BLOCK*
+2. Jangan telepon bot.
+Sanksi: *SOFT BLOCK*
 
-3. Jangan mengeksploitasi bot.😖
+3. Jangan mengeksploitasi bot.
 Sanksi: *PERMANENT BLOCK*
 
-🗯️ Bot tidak atau lambat merespon ?
-➡️ Jaringan Lag.
+🗯️ Bot not or slow to respond?
+➡️ mungkin kamu jelek seperti owner
 
-🗯️ Boleh saya menambah ke grup?
-➡️ izin dulu ke owner
+🗯️ Can I add to the group?
+➡️ Boleh, gausah minta izin Owner, ganggu aja
 
-🗯️ Prefixnya apa ya?
-➡️ Bot ini menggunakan multi prefix. Berarti anda bisa menggunakan prefix #, . , Dan prefix wajar lainnya.
+🗯️ Is the Bot active 24 hours a day?
+➡️ ya, tapi bot mati setiap tanggal 27-1 Setiap bulan
 
-🗯️ Kak, kok syaa chat owner tidak direspon?
-➡️ Owner hanya merespon pertanyaan seputar bot Dan kendala eror, tidak untuk kenalan ataupun mengemis script.
+🗯️ Sis, how come the chat owner is not responding?
+➡️ ownernya lagi maraton anime, kamu mengganggu
 
-
-Jika sudah dipahami rules-nya, silakan ketik *${prefix}allmenu* untuk memulai!
-
-⚠️ Segala kebijakan dan ketentuan ScritleMz di pegang oleh owner dan segala perubahan kebijakan, sewaktu waktu owner berhak mencabut, memblokir user. 
-
-Arigatou Gozaimasu! Untuk kalian user ramah dan Beberapa orang yg ikut membantu juga dalam project pembuatan ScritleMz
-😖🙏
+⚠️ All Scritle-MD policies and provisions are held by the owner and all policy changes, at any time the owner has the right to revoke, block users.
 `
 }
 exports.welcome = () =>{
-	return`𝖩𝖺𝗇𝗀𝖺𝗇 𝗅𝗎𝗉𝖺 𝗂𝗇𝗍𝗋𝗈 𝗄𝖺𝗄 🤗
-	
-╭ 𝖭𝖺𝗆𝖺 :
-𐁘. 𝖴𝗆𝗎𝗋 :
-𐁘. 𝖦𝖾𝗇𝖽𝖾𝗋 :
-𐁘. 𝖠𝗌𝗄𝗈𝗍 :
-𐁘. 𝖯𝖺𝗍𝗎𝗁𝗂 𝗋𝗎𝗅𝖾𝗌 𝗀𝗋𝗎𝗉 𝗒𝖺 𝗄𝖺k ~`
+	return` Gausah intro, aku gamau tau tentang kamu`
 }
 exports.leave = () =>{
-	return`Yah kok out 😣 Mental aman kan kak >.<
-Goodbye`
+	return`Don't come back again`
 }
 exports.source = () =>{
 return`*------「 SOURCE CODE 」 ------*
@@ -485,8 +429,8 @@ exports.tos = () => {
 *-------「 GITHUB 」 -------*
 
 https://github.com/whojoestar
-Hai kak jangan lupa follow github saya.. ☺️ 
-terimakasih untuk yang sudah follow..
+This is my Github
+thanks for those who have followed..
     `
 }
 
@@ -1076,11 +1020,9 @@ return`「 Random Cewe 」
 
 exports.tqto = () =>{
 	return`「 TqTo 」 
-𐁘. HandraMz
-𐁘. My Parents
-𐁘. Fatih A.
+My waifu and nothing elsee
 `
-}
+
 
 exports.primbonmenu = (prefix) =>{
 	return`「 Primbon 」
