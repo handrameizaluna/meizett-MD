@@ -1,19 +1,5 @@
 /**
-	@ No Re Upload, recode sendiri base nya klo mau 😏
-	@ Sc no enc silahkan cek https://github.com/DikaArdnt/alpha-Morou
- 
-	 「 TqTo 」
-	@ My God
-	@ My Parents
-	@ Fatih A.
-	@ Ferdi
-	@ DikaArdnt [author]
-	@ Mhankbarbar
-	@ Nurutomo
-	@ Rashid
-	@ ZeeoneOfc
-	@ Penyedia Module
-	@ And All Support
+    © copyright by 𝑻𝒓𝒂𝒇𝒂𝒍𝒈𝒂𝒓 𝑫. 𝑯𝒂𝒏𝒅𝒓𝒂 𝑱𝒐𝒆𝒔𝒕𝒂𝒓
 **/
 
 

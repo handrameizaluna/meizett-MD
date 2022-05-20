@@ -12,27 +12,27 @@ global.APIKeys = {
 }
 
 // setting 
-global.autoread = false // auto read pesan / message
-global.autorecording = true //status auto merekam ( auto record )
+global.autoread = true // auto read pesan / message
+global.autorecording = false //status auto merekam ( auto record )
 global.autoketik = false //status auto mengetik (auto typing)
 global.available = false //status online (online)
 
 // Other
-global.botname = "Scritle-MD" //namabot kalian
-global.ownername= "Handra Meizaluna" //nama kalian
-global.myweb ="https://api-handramz.herokuapp.com/" //bebas asal jan hapus
-global.youtube = "https://instagram.com/scritle_" //bebas asal jan hapus
-global.github = "https://whojoestar.github.io/" //bebas
-global.email = "scritlebothandramz@gmail.com" //bebas
-global.region = "Indonesia" //bebas
-global.ownernomer = "6283176474191" // nomor wa kalian
-global.ownernomerr = "+6283176474191" //nmr wa kalian
-global.thumbnail = "./image/lol.jpg" // ini lol.jpg adalah nama foto di folder image. untuk foto bot
-global.donasi = "./image/donasi.jpg" // foto donasi di folder image
-global.background_welcome="https://telegra.ph/file/90a931648de597820bc08.jpg" // maks size 30kb, agar welcome image nya tdk delay
-global.owner = ["6283176474191"] //ganti agar fitur owner bisa di gunakan
-global.packname = '© Scritlebot' //sticker wm ubah
-global.author = 'scritle_' //sticker wm ganti nama kalian
+global.botname = "Scritle-MD"
+global.ownername= "Trafalgar D. Handra Joestar"
+global.myweb ="https://api-handramz.herokuapp.com/"
+global.youtube = "https://instagram.com/handrajoestar_" 
+global.github = "https://github.com/whojoestar"
+global.email = "scritlebothandramz@gmail.com"
+global.region = "Indonesia"
+global.ownernomer = "6283176474191" 
+global.ownernomerr = "+6283176474191"
+global.thumbnail = "./image/lol.jpg"
+global.donasi = "./image/donasi.jpg"
+global.background_welcome="https://telegra.ph/file/90a931648de597820bc08.jpg"
+global.owner = ["6283176474191"]
+global.packname = '© Scritle'
+global.author = 'Joestar'
 global.sessionName = 'session'
 global.flaming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=sketch-name&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
 global.fluming = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=fluffy-logo&doScale=true&scaleWidth=800&scaleHeight=500&fontsize=100&text='
@@ -42,17 +42,17 @@ global.flasmurf = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutp
 global.prefa = ['','!','.','🐦','🐤','🗿']
 global.sp = '⭔'
 global.mess = {
-    sukses: 'Done',
-    admin: 'Perintah Ini Hanya Bisa Digunakan Oleh Admin !',
-    botAdmin: 'Perintah Ini Hanya Bisa Digunakan Ketika Bot Menjadi Admin !',
-    owner: 'Perintah Ini Hanya Bisa Digunakan Oleh Owner !',
-    group: 'Perintah Ini Hanya Bisa Digunakan Di Group !',
-    private: 'Perintah Ini Hanya Bisa Digunakan Di Private !',
-	bot: 'Fitur Khusus Pengguna Nomor Bot',
-    errtoimg: 'Maaf Saat Ini Belum Support Sticker Gif !',
-    wait: '⏳ Sedang Di Proses',
-	lockCmd: 'Fitur Tidak Diaktifkan Oleh Owner!',
-	example1: 'Selamat Datang @user Di Group @subject Jangan Lupa Baca Rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
+    sukses: 'done',
+    admin: 'This command can only be used by admins!',
+    botAdmin: 'This command can only be used when the bot becomes an admin!',
+    owner: 'This command can only be used by the owner!',
+    group: 'This command can only be used in groups!',
+    private: 'This command can only be used in private!',
+	bot: 'Bot Number User Special Features',
+    errtoimg: 'Gomen, not yet support gif stickers',
+    wait: 'Process, Wait a moment',
+	lockCmd: 'Feature Not Enabled By Owner!',
+	example1: 'Welcome @user in the group @subject Dont forget to read the rules @desc\n\nNote :\n1. @user (Mention User Join)\n2. @bio (Get Bio User Join)\n3. @tanggal (Date Now)\n4. @desc (Get Description Group)\n5. @subject (Group Name)'
 }
 
 let file = require.resolve(__filename)
