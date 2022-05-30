@@ -1,14 +1,14 @@
 {
-  "name": "AlphabotMD",
-  "version": "8.0.0",
+  "name": "Alphabot-Md",
+  "version": "10.0.0",
   "description": "Alpha Bot Multi Device, Only update in YouTube ZEEONE OFC",
-  "main": "scritlemz.js",
+  "main": "zeeone.js",
   "directories": {
     "lib": "lib"
   },
   "license": "MIT",
   "scripts": {
-    "start": "node scritlemz.js"
+    "start": "node zeeone.js"
    },
   "keywords": [
     "termux",
@@ -22,7 +22,7 @@
   "author": "ZeeoneOfc",
   "license": "MIT",
   "dependencies": {
-    "@adiwajshing/baileys-md": "github:adiwajshing/baileys#multi-device",
+    "@adiwajshing/baileys": "^4.1.0",
     "@adiwajshing/keyed-db": "^0.2.4",
     "awesome-phonenumber": "^2.64.0",
     "@vitalets/google-translate-api": "^7.0.0",
