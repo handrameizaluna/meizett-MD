@@ -1,49 +1,49 @@
 exports.private = () =>{
-	return`Fitur hanya bisa di gunakan di private chat`
+	return`the feature can only be used in private chat`
 	}
 exports.wait = () => {
-    return `tunggu sebentar 🏄`
+    return `wait a moment 🏄`
 }
 
 exports.ok = () => {
-    return `Done 🏄`
+    return `done`
 }
 
 exports.err = () => {
-    return `Fitur lagi Error`
+    return `More features Error`
 }
 exports.erorLink = () => {
-    return `Link nya error`
+    return `The link is error`
 }
 exports.media = () => {
-    return `Silahkan pilih media yang ingin kamu download`
+    return `Please select the media you want to download`
 }
 exports.replyImg = (prefix, command) => {
-    return `Kirim/Reply Foto Dengan Caption ${prefix + command}`
+    return `Send/Reply Photo With Caption ${prefix + command}`
 }
 
 exports.wrongFormat = (prefix) => {
-    return `Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*.`
+    return `Incorrect format ❎ Please check how to use in *${prefix}allmenu*.`
 }
 
 exports.emptyMess = () => {
-    return `Harap masukkan pesan yang ingin disampaikan!`
+    return `Please enter the message you want to convey!`
 }
 
 exports.cmdNotFound = (cmd, prefix) => {
-    return `Command *${cmd}* tidak terdaftar di *${prefix}allmenu*`
+    return `Command *${cmd}* not registered in *${prefix}allmenu*`
 }
 
 exports.ownerOnly = () => {
-    return `Command ini khusus Owner`
+    return `This command is for the owner`
 }
 
 exports.doneOwner = () => {
-    return `️Sudah selesai`
+    return `️It's finished`
 }
 
 exports.groupOnly = () => {
-    return `👥  Command ini hanya bisa digunakan di dalam grup!`
+    return `This command can only be used in groups!`
 }
 
 exports.adminOnly = () => {
@@ -51,7 +51,7 @@ exports.adminOnly = () => {
 }
 
 exports.nhFalse = () => {
-    return `Kode tidak valid!`
+    return `Invalid code!`
 }
 
 exports.listBlock = (blockNumber) => {
@@ -86,7 +86,7 @@ exports.notNum = (q) => {
     return `"${q}", not numbers!`
 }
 exports.menunya = () =>{
-	return`Hi I'm Scritle-MD, A bot that hasn't been updated since 07 jan 2022, because the owner is currently working in the anime world 🧙🏻🤍, I hope I can help.
+	return`Hi I'm Scritle-MD, dumb bot made by handra meizaluna which might be of some help.
 `
 }
 exports.listMenu = (time, salam, pushname, prefix) => {
@@ -179,7 +179,6 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 𐁘. ${prefix}ytsearch [query]
 𐁘. ${prefix}wallpaper [query]
 𐁘. ${prefix}wikimedia [query]
-𐁘. ${prefix}hentai
 𐁘. ${prefix}wattpad [query]
 𐁘. ${prefix}webtoons [query]
 𐁘. ${prefix}drakor [query]
@@ -380,7 +379,7 @@ exports.listMenu = (time, salam, pushname, prefix) => {
 𐁘. ${prefix}tyni
 
 「 TqTo 」 
-My waifu and nothing elsee
+My waifu and nothing elsee.
     `
 }
 
@@ -407,7 +406,7 @@ Sanksi: *PERMANENT BLOCK*
 ➡️ ya, tapi bot mati setiap tanggal 27-1 Setiap bulan
 
 🗯️ Sis, how come the chat owner is not responding?
-➡️ ownernya lagi maraton anime, kamu mengganggu
+➡️ ownernya lagi nonton anime, kamu mengganggu
 
 ⚠️ All Scritle-MD policies and provisions are held by the owner and all policy changes, at any time the owner has the right to revoke, block users.
 `
@@ -430,7 +429,7 @@ exports.tos = () => {
 
 https://github.com/whojoestar
 This is my Github
-thanks for those who have followed..
+thanks for those who have followed.
     `
 }
 
@@ -976,24 +975,12 @@ return`「 Game Menu 」
 𐁘. ${prefix}caklontong
 `
 }
-exports.asupan = (prefix) =>{
-return`「 Asupan Menu 」
-feature has been removed.
+exports.asupan = () =>{
+return` feature has been removed.
 `
 }
-exports.cecan = (prefix) =>{
-return`「 Random Cewe 」
-𐁘. ${prefix}china 
-𐁘. ${prefix}indonesia 
-𐁘. ${prefix}malaysia 
-𐁘. ${prefix}thailand 
-𐁘. ${prefix}korea 
-𐁘. ${prefix}japan 
-𐁘. ${prefix}vietnam 
-𐁘. ${prefix}jenni 
-𐁘. ${prefix}jiso 
-𐁘. ${prefix}lisa  
-𐁘. ${prefix}rose
+exports.cecan = () =>{
+return` feature has been removed.
 `
 }
 
