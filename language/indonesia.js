@@ -2,7 +2,7 @@ exports.private = () =>{
 	return`the feature can only be used in private chat`
 	}
 exports.wait = () => {
-    return `wait a moment 🏄`
+    return `wait a moment`
 }
 
 exports.ok = () => {
@@ -86,7 +86,7 @@ exports.notNum = (q) => {
     return `"${q}", not numbers!`
 }
 exports.menunya = () =>{
-	return`Hi I'm Scritle-MD, dumb bot made by handra meizaluna which might be of some help.
+	return`Hi I'm Scritle-MD, public bot Handra Joestar.
 `
 }
 exports.listMenu = (time, salam, pushname, prefix) => {
@@ -399,6 +399,9 @@ Sanksi: *PERMANENT BLOCK*
 🗯️ Bot not or slow to respond?
 ➡️ mungkin kamu jelek seperti owner
 
+🗯️ kenapa bot menggunakan bahasa Inggris 
+➡️ biar estetik.
+
 🗯️ Can I add to the group?
 ➡️ Boleh, gausah minta izin Owner, ganggu aja
 
@@ -412,24 +415,32 @@ Sanksi: *PERMANENT BLOCK*
 `
 }
 exports.welcome = () =>{
-	return` Gausah intro, aku gamau tau tentang kamu`
+	return` 
+Gausah intro, kita gamau tau tentang kamu
+`
 }
+
 exports.leave = () =>{
-	return`Don't come back again`
+	return`
+dont come back again
+`
+
 }
+
 exports.source = () =>{
 return`*------「 SOURCE CODE 」 ------*
 
 Base : https://github.com/whojoestar/
 `
-}
-exports.tos = () => {
-    return `
-*-------「 GITHUB 」 -------*
 
+}
+
+exports.tos = () => {
+    return `*-------「 GITHUB 」 -------*
+    
 https://github.com/whojoestar
 This is my Github
-thanks for those who have followed.
+thanks f0r those who have followed
     `
 }
 
@@ -441,15 +452,10 @@ exports.info = (prefix) =>{
 𐁘. ${prefix}ping
 𐁘. ${prefix}runtime
 𐁘. ${prefix}botstatus
-𐁘. ${prefix}donate
 `}
 
 exports.ownermenu = (prefix) =>{
 return`「 Owner 」 
-𐁘. < evaluate
-𐁘. > evaluate
-𐁘. $ exec
-𐁘. => exec
 𐁘. ${prefix}setmenu [query]
 𐁘. ${prefix}setmenu templateLocation
 𐁘. ${prefix}setmenu templateTenor
@@ -537,7 +543,6 @@ exports.search = (prefix) =>{
 𐁘. ${prefix}ytsearch [query]
 𐁘. ${prefix}wallpaper [query]
 𐁘. ${prefix}wikimedia [query]
-𐁘. ${prefix}hentai
 𐁘. ${prefix}wattpad [query]
 𐁘. ${prefix}webtoons [query]
 𐁘. ${prefix}drakor [query]
@@ -685,86 +690,8 @@ exports.ranime = (prefix) =>{
 `
 }
 
-exports.nsfw = (prefix) =>{
-	return`「 Nsfw & Sfw 」
-𐁘. ${prefix}ahegao
-𐁘. ${prefix}ass
-𐁘. ${prefix}bdsm
-𐁘. ${prefix}blowjob
-𐁘. ${prefix}cuckold
-𐁘. ${prefix}cum
-𐁘. ${prefix}ero
-𐁘. ${prefix}femdom
-𐁘. ${prefix}foot
-𐁘. ${prefix}gangbang
-𐁘. ${prefix}glasses
-𐁘. ${prefix}jahy
-𐁘. ${prefix}manga
-𐁘. ${prefix}masturbation
-𐁘. ${prefix}neko
-𐁘. ${prefix}orgy
-𐁘. ${prefix}panties
-𐁘. ${prefix}pussy
-𐁘. ${prefix}tentacles
-𐁘. ${prefix}thighs
-𐁘. ${prefix}yuri
-𐁘. ${prefix}feet
-𐁘. ${prefix}lewdkemo
-𐁘. ${prefix}woof
-𐁘. ${prefix}gasm
-𐁘. ${prefix}solo
-𐁘. ${prefix}8ball
-𐁘. ${prefix}goose
-𐁘. ${prefix}avatar
-𐁘. ${prefix}hololewd
-𐁘. ${prefix}gecg
-𐁘. ${prefix}holo
-𐁘. ${prefix}fox_girl
-𐁘. ${prefix}tits
-𐁘. ${prefix}eroyuri
-𐁘. ${prefix}holoyero
-𐁘. ${prefix}lizard
-𐁘. ${prefix}keta
-𐁘. ${prefix}eron
-𐁘. ${prefix}erok
-𐁘. ${prefix}kemonomimi
-𐁘. ${prefix}cum_jpg
-𐁘. ${prefix}nsfw_avatar
-𐁘. ${prefix}erofeet
-𐁘. ${prefix}meow
-𐁘. ${prefix}wallpaper
-𐁘. ${prefix}waifu
-𐁘. ${prefix}trap
-𐁘. ${prefix}lewd
-𐁘. ${prefix}pussy_jpg
-𐁘. ${prefix}futanari
-𐁘. ${prefix}lewdk
-𐁘. ${prefix}solog
-𐁘. ${prefix}smug
-𐁘. ${prefix}cum
-𐁘. ${prefix}slap
-𐁘. ${prefix}les
-𐁘. ${prefix}erokemo
-𐁘. ${prefix}bj
-𐁘. ${prefix}pwankg
-𐁘. ${prefix}pat
-𐁘. ${prefix}poke
-𐁘. ${prefix}feed
-𐁘. ${prefix}nsfw_neko_gif
-𐁘. ${prefix}pussy
-𐁘. ${prefix}feetg
-𐁘. ${prefix}baka
-𐁘. ${prefix}hug
-𐁘. ${prefix}kiss
-𐁘. ${prefix}tickle
-𐁘. ${prefix}spank
-𐁘. ${prefix}kuni
-𐁘. ${prefix}classic
-𐁘. ${prefix}boobs
-𐁘. ${prefix}anal
-𐁘. ${prefix}ngif
-𐁘. ${prefix}cuddle
-𐁘. ${prefix}zettai
+exports.nsfw = () =>{
+	return` feature has been removed.
 `
 }
 
@@ -953,7 +880,6 @@ exports.textpro = (prefix) =>{
 `
 }
 
-
 exports.other = (prefix) =>{
 return`「 Others 」
 𐁘. ${prefix}ttp [text]
@@ -966,6 +892,7 @@ return`「 Others 」
 𐁘. ${prefix}memegen [text|text]
 `
 }
+
 exports.game = (prefix) =>{
 return`「 Game Menu 」
 𐁘. ${prefix}kuismath
@@ -975,10 +902,12 @@ return`「 Game Menu 」
 𐁘. ${prefix}caklontong
 `
 }
+
 exports.asupan = () =>{
 return` feature has been removed.
 `
 }
+
 exports.cecan = () =>{
 return` feature has been removed.
 `
@@ -988,7 +917,7 @@ exports.tqto = () =>{
 	return`「 TqTo 」 
 My waifu and nothing elsee
 `
-
+}
 
 exports.primbonmenu = (prefix) =>{
 	return`「 Primbon 」
