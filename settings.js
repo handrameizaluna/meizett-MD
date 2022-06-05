@@ -19,7 +19,7 @@ global.available = false //status online (online)
 
 // Other
 global.botname = "Scritle-MD"
-global.ownername= "Trafalgar D. Handra Joestar"
+global.ownername= "HandraMz. the joestar"
 global.myweb ="https://api-handramz.herokuapp.com/"
 global.youtube = "https://instagram.com/handrajoestar_" 
 global.github = "https://github.com/whojoestar"
