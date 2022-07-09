@@ -1,49 +1,543 @@
-exports.private = () =>{
-	return`the feature can only be used in private chat`
+exports.noAbsen = () =>{
+return `❌ Tidak ada absen berlangsung di group ini !`
+}
+exports.StartAbsen = () =>{
+	return`Mulai Absen`
 	}
-exports.wait = () => {
-    return `wait a moment`
+exports.DahAbsen = () =>{
+	return`Kamu sudah absen`
+	}
+exports.DelAbsen = () =>{
+	return`✅ Berhasil menghapus absen di group ini`
+	}
+exports.adaAbsen = () =>{
+	return`Masih ada sesi absen di group ini !`
+	}
+exports.SAbsen = () =>{
+	return`Absen dimulai`
+	}
+//
+exports.SetCmd = (prefix, command) =>{
+	return`Reply stiker!!\nExample : ${prefix + command} menu\n\n\n*Note : Tidak dapat disertai Prefix!!*`
+	}
+exports.CmdApa = () =>{
+	return`Untuk Command Apa?`
+	}
+exports.UCmd = () =>{
+	return`Anda tidak memiliki izin untuk mengubah perintah stiker ini`
+	}
+exports.HashCmd = () =>{
+	return`Tidak ada hash`
+	}
+exports.DelCmd = () =>{
+	return`✅ Sticker cmd telah di hapus`
+	}
+exports.LockCmd = () =>{
+	return`Reply pesan`
+	}
+exports.NoCmd = () =>{
+	return`Hash tidak ditemukan di database`
+	}
+exports.ReplyMsg = () =>{
+	return`Reply Message Yang Ingin Disave Di Database`
+	}
+exports.NoMsg = (prefix, command) =>{
+	return`Example : ${prefix + command} nama file`
+	}
+exports.AdMsg = (text) => {
+    return `'${text}' telah terdaftar di list pesan`
+}
+exports.DoneMsg = (prefix, text) => {
+    return `Berhasil menambahkan pesan di list pesan sebagai '${text}'
+    
+Akses dengan ${prefix}getmsg ${text}
+Lihat list Pesan Dengan ${prefix}listmsg`
+}
+exports.GetMsg = (prefix, command) => {
+    return `Example : ${prefix + command} file name\n\nLihat list pesan dengan ${prefix}listmsg`
+}
+exports.NoInMsg = (text) => {
+    return `'${text}' tidak terdaftar di list pesan`
+}
+exports.DelMsg = (text) => {
+    return `Berhasil menghapus '${text}' dari list pesan`
 }
 
+exports.OnBef = () => {
+    return `Sudah di aktifkan sebelumnya`
+}
+exports.OffYaBef = () => {
+    return `Sudah di nonaktifkan sebelumnya`
+}
+exports.OkOn = (command) => {
+    return `${command} Berhasil Di Aktifkan !`
+}
+exports.OffBef = (command) => {
+    return `${command} Berhasil Di Nonaktifkan !`
+}
+exports.OkMute = () => {
+    return `Bot Telah Di Mute Di Group Ini`
+}
+exports.OkUnMute = () => {
+    return `Bot Berhasil Di UnMute`
+}
+exports.OkUnBanC = () => {
+    return `Bot Berhasil Di unban chat`
+}
+exports.NoMute = () => {
+    return `Bot belum di ban dalam group ini`
+}
+
+exports.NoMsgBot = () => {
+    return `Pesan tersebut bukan dikirim oleh bot!`
+}
+exports.ToimgErr = () => {
+    return `Maaf Saat Ini Belum Support Sticker Gif`
+}
+exports.NoToImg = (prefix, command) => {
+    return `Reply Sticker Dengan Caption *${prefix + command}*`
+}
+exports.BotPublic = () => {
+    return `Sukses Ganti Ke Mode Public`
+}
+exports.BotSelf = () => {
+    return `Sukses Ganti Ke Mode Self\n\nUntuk mengubah ke mode public silahkan gunakan nomor bot`
+}
+exports.NoToStik = (prefix, command) => {
+    return `Kirim/Reply Gambar/Video Dengan Caption ${prefix + command}\n\nDurasi Sticker Video 1-9 Detik`
+}
+exports.NoPpBot = (prefix, command) => {
+    return `Kirim/Reply Image Dengan Caption ${prefix + command}`
+}
+exports.ToAud = (prefix, command) => {
+    return `Kirim/Reply Video/Audio Yang Ingin Dijadikan Audio Dengan Caption ${prefix + command}`
+}
+exports.ToMp3 = (prefix, command) => {
+    return `Kirim/Reply Video/Audio Yang Ingin Dijadikan MP3 Dengan Caption ${prefix + command}`
+}
+exports.ToVn= (prefix, command) => {
+    return `Reply Video/Audio Yang Ingin Dijadikan VN Dengan Caption ${prefix + command}`
+}
+exports.NoQouted = () => {
+    return `Pesan Yang anda reply tidak mengandung reply`
+}
+exports.SetGcName = (prefix, command) => {
+    return `Kirim perintah ${prefix + command} *teks*`
+}
+exports.SetPpGc = (prefix, command) => {
+    return `Kirim/Reply Image Dengan Caption ${prefix + command}`
+}
+exports.JoinGc = () => {
+    return `Masukkan Link Group!`
+}
+exports.MauKick = () => {
+    return `Kirim nomer/tag/reply target yang ingin di kick !`
+}
+exports.MauAdd = () => {
+    return `Kirim nomer/tag/reply target yang ingin di add !`
+}
+exports.NakPm= () => {
+    return `Kirim nomer/tag/reply target yang ingin di promote !`
+}
+exports.NakDm = () => {
+    return `Kirim nomer/tag/reply target yang ingin di demote !`
+}
+exports.Family = () => {
+    return `Masih Ada Sesi Yang Belum Diselesaikan!`
+}
+exports.NoWm = (prefix, command) => {
+    return `Kirim perintah ${prefix + command} packname|author`
+}
+exports.DoneExif = (packname, author) => {
+    return `Exif Berhasil Diubah Menjadi\n\nPackname : ${packname}\nAuthor : ${author}`
+}
+exports.NoTeksOne = (prefix, command) => {
+    return `Kirim perintah ${prefix + command} *teks*\n\nExp : ${prefix + command} WhatsApp Bot`
+}
+exports.NoTeksTwo = (prefix, command) => {
+    return `Kirim perintah ${prefix + command} *teks 1|teks 2*\n\nExp : ${prefix + command} WhatsApp|Bot`
+}
+exports.OffNsfw = () => {
+    return `Fitur nsfw belum di aktifkan`
+}
+exports.CoverBanLol = (prefix, command) => {
+    return `Ex: ${prefix + command} nama|heroes\nUsage: ${prefix + command} zeeone|jinx7`
+}
+exports.coverbannerlol = (style) => {
+    return `*Heroes Yg Kamu Masukkan Salah*\n\n_Berikut list heroes yg benar, Total_ *${style}* _heroes_\n\n`
+}
+exports.pubglogomaker = (prefix, command) => {
+    return `Ex: ${prefix + command} nama|style\nUsage: ${prefix + command} zeeone|women`
+}
+exports.pubglogomaker_ = (style) => {
+    return `*Style Yg Kamu Masukkan Salah*\n\n_Berikut list style yg benar, Total_ *${style}* _style_\n\n`
+}
+exports.colorfulpubg = (prefix, command) => {
+    return `Ex: ${prefix + command} nama|color\nUsage: ${prefix + command} zeeone|gold`
+}
+exports.colorfulpubg_ = (style) => {
+    return `*Color Yg Kamu Masukkan Salah*\n\n_Berikut list color yg benar, Total_ *${style}* _color_\n\n`
+}
+exports.astronotspace = (prefix, command) => {
+    return `Ex: ${prefix + command} nama|style\nUsage: ${prefix + command} zeeone|anubis`
+}
+exports.wallpaperaov = (prefix, command) => {
+    return `Ex: ${prefix + command} nama|heroes\nUsage: ${prefix + command} zeeone|allain`
+}
+exports.maketeamlogo = (style, style2, prefix, command) => {
+    return `Ex: ${prefix + command} nama|${style}\nUsage: ${prefix + command} zeeone|${style2}`
+}
+
+exports.MaketeamlogoT = (a, b, c, d, e, f, g, h) => {
+    return `Ex: ${g + h} ${a}|${b}|${c}\nUsage: ${g + h} ${e}|${f}|${d}`
+}
+exports.maketeamlogo_ = (style, style2) => {
+    return `*${style2} Yg Kamu Masukkan Salah*\n\n_Berikut List ${style2} Yg Benar, Total_ *${style}* _${style2}_\n\n`
+}
+
+exports.KisahNabi = (prefix, command, style) => {
+    return `Exp : ${prefix + command} ${style}`
+}
+exports.quran2 = (prefix, command, juz , brp) => {
+    return `Exp : ${prefix + command} ${juz}\nUsage: ${prefix + command} ${brp}`
+}
+
+exports.quran3 = (prefix, command, surah , ayat, brp, brp2) => {
+return`Ex : ${prefix + command} ${surah}|${ayat}\nUsage: ${prefix + command} ${brp}|${brp2}`
+}
+
+exports.JwbErr = () => {
+    return `❌ Jawaban Salah`
+}
+
+exports.JwbTrue = (tebak) => {
+return`🎮 ${tebak} 🎮\n\nJawaban Benar 🎉\n\nIngin bermain lagi? tekan button dibawah`
+}
+exports.TbGam = () => {
+    return `Tebak Gambar`
+}
+exports.TbKa = () => {
+    return `Tebak Kata`
+}
+exports.TbBe = () => {
+    return `Tebak Bendera`
+}
+exports.TbCak = () => {
+    return `Cak Lontong`
+}
+exports.TbSu = () => {
+    return `Susun Kata`
+}
+exports.TbAt = () => {
+    return `Tebak Kalimat`
+}
+exports.TbSi = () => {
+    return `Tebak Siapa`
+}
+exports.Tbte = () => {
+    return `Teka Teki`
+}
+exports.TbEn = () => {
+    return `Tebak Kabupaten`
+}
+exports.TbKi = () => {
+    return `Tebak Kimia`
+}
+exports.TbLi = () => {
+    return `Tebak Lirik`
+}
+exports.TbKan = () => {
+    return `Tebak Tebakan`
+}
+
+exports.TbFamily = (soal, jawaban, find) => {
+    return `*Jawablah Pertanyaan Berikut :*\n${soal}\n\nTerdapat *${jawaban}* Jawaban ${find(v => v.includes(' ')) ? '(Beberapa Jawaban Terdapat Spasi)' : ''}`
+}
+
+exports.TbAfk = (nama, afk) => {
+    return `${nama} Telah Afk Dengan Alasan ${afk ? ': ' + afk : 'Nothing'}`
+}
+
+exports.TbGambar = (desk, time) => {
+    return `Silahkan Jawab Soal Di Atas Ini\n\nDeskripsi : ${desk}\nWaktu : ${time}`
+}
+exports.TbGambar_ = (jawaban) => {
+    return `Waktu Habis\nJawaban:  ${jawaban}`
+}
+exports.TbGambar__ = (jawaban, desk) => {
+    return `Waktu Habis\nJawaban:  ${jawaban}}\nDeskripsi : ${desk}`
+}
+exports.TbKata = (soal, time) => {
+    return `Silahkan Jawab Pertanyaan Berikut\n\n${soal}\nWaktu : ${time}`
+}
+exports.TbBendera = (time) => {
+    return `Silahkan Jawab Pertanyaan Diatas\n\nWaktu : ${time}`
+}
+exports.TbKabupaten = (time) => {
+    return `Gambar Diatas Adalah Gambar dari Kabupaten?\nWaktu : ${time}`
+}
+exports.TbKimia = (soal, time) => {
+    return `Apa Arti Dari Simbol : *${soal}*?\nWaktu : ${time}`
+}
+exports.TbLirik = (soal, time) => {
+    return `Ini Adalah Lirik Dari Lagu? : *${soal}*?\nWaktu : ${time}`
+}
+exports.TbSusun = (soal, tipe, time) => {
+    return `*Jawablah Pertanyaan Berikut :*\nSoal : ${soal}\nTipe : ${tipe}\nWaktu : ${time}`
+}
+exports.TbMath = (modes, prefix, command) => {
+    return `Mode: ${modes}\nContoh penggunaan: ${prefix + command} medium`
+}
+exports.TbMath_ = (soal, time) => {
+    return `*Berapa hasil dari: ${soal}*?\n\nWaktu: ${time} detik`
+}
+exports.TbJail = (prefix, command) => {
+    return `Kirim/Reply Foto/Sticker Dengan Caption ${prefix + command}`
+}
+exports.TbRepo = (prefix, command) => {
+    return `Kirim perintah ${prefix + command} *user* *repo* *branch*\n\nExp. ${prefix + command} *zeeone-ofc* *Alphabot-Md* *v12*`
+}
+exports.StalkIg = () => {
+    return `Masukkan username`
+}
+exports.Tomp4 = (prefix, command) => {
+    return `Reply stiker gif dengan caption ${prefix + command}`
+}
+exports.Tourl = (prefix, command) => {
+    return `Kirim/Reply Media Dengan Caption ${prefix + command}`
+}
+exports.Smeme = (prefix, command) => {
+    return `Kirim/Reply Foto Dengan Caption ${prefix + command} *teks*`
+}
+exports.Smeme_ = (prefix, command) => {
+    return `Kirim/Reply Foto Dengan Caption ${prefix + command} *teks|tesk2*`
+}
+exports.Bcall = (anu, time, chat) => {
+    return `Mengirim Broadcast Ke ${anu} ${chat}\nWaktu Selesai ${time * 1.5} detik`
+}
+exports.Stag = (prefix, command) => {
+    return `Reply sticker dengan caption ${prefix + command}`
+}
+exports.Vtag = (prefix, command, video) => {
+    return `Kirim/reply ${video} dengan caption ${prefix + command}`
+}
+exports.TrLate = (prefix, command) => {
+    return `Contoh :
+
+1. Kirim perintah ${prefix + command} *kode bahasa* *teks*
+	• Exp : ${prefix + command} id halo
+2. Reply chat dengan caption ${prefix + command} *kode bahasa*
+	• Exp : ${prefix + command} id halo
+Daftar bahasa yang di dukung : https://cloud.google.com/translate/docs/languages`
+}
+exports.Addlist = () => {
+    return `Key tidak boleh sama dengan fitur / command bot`
+}
+exports.Addlist_ = (prefix, command) => {
+    return `Gunakan dengan cara ${prefix + command} *key|response*\n\n_Contoh_\n\n${prefix + command} Hi|Halo`
+}
+exports.Addlist__ = (arg) => {
+    return `List respon dengan key : *${arg}* sudah ada di group ini.`
+}
+exports.AddlistDone = (arg) => {
+    return `Sukses set list message dengan key : *${arg}*`
+}
+exports.Dellist = () => {
+    return `Belum ada list message di database`
+}
+exports.Dellist_  = (prefix, command) => {
+    return `Gunakan dengan cara ${prefix + command} *key*\n\n_Contoh_\n\n${prefix + command} Hi`
+}
+exports.Dellist__ = (key) => {
+    return `List respon dengan key *${key}* tidak ada di database!`
+}
+exports.DellistDone = (key) => {
+    return `Sukses delete list message dengan key *${key}*`
+}
+exports.ListUp = (key) => {
+    return `Maaf, untuk key *${key}* belum terdaftar di group ini`
+}
+exports.UpList = (key) => {
+    return `Sukses update list message dengan key : *${args1}*`
+}
+exports.Anonymous = (pushname, prefix) => {
+    return `Hai ${pushname} Selamat Datang di Anonymous Chat\n\nKetik ${prefix}start untuk mencari Teman Chat anda, atau bisa pencet tombol Search dibawah`
+}
+exports.Anon = () => {
+    return `Cari Teman Chat`
+}
+exports.StopAnon = () => {
+    return `Kamu Sedang Tidak Berada Di Sesi Anonymous, Tekan Button Untuk Mencari Partner `
+}
+exports.AnonNew = () => {
+    return `Cari Teman Baru`
+}
+exports.AnonDahStop = () => {
+    return `✅ Berhasil memberhentikan chat`
+}
+exports.StopAnonByFren = () => {
+    return `⚠️ Sesi chat ini telah diberhentikan oleh teman chat kamu`
+}
+exports.AnonOn = () => {
+    return `⚠️ Kamu masih dalam sesi chat dengan partner!`
+}
+exports.AnonFind = (prefix) => {
+    return `_Pasangan Ditemukan 🐼_\n${prefix}skip -- _cari pasangan baru_\n${prefix}stop -- _hentikan dialog ini_`
+}
+exports.AnonSearch = () => {
+    return `🔎 Mohon tunggu sedang mencari teman chat`
+}
+exports.NoAnon = () => {
+    return `⚠️ Kamu belum pernah memulai chat!`
+}
+
+exports.AllFitur = () => {
+    return `\n_Semua fitur bot_`
+}
+exports.InfoMenu = () => {
+    return `\n_Mencari informasi terkini melalui bot_`
+}
+exports.KhususOwn = () => {
+    return `\n_Fitur khusus owner bot_`
+}
+exports.DataBor = () => {
+    return `\n_Menyimpan sesuatu di database bot_`
+}
+exports.MenuGc = () => {
+    return `\n_Menampilkan fitur khusus group_`
+}
+exports.MenuAni = () => {
+    return `\n_Mencari random gambar anime_`
+}
+exports.TagMem = () => {
+    return `\n_Menandai member group_`
+}
+exports.StalkOrk = () => {
+    return `\n_Kepoin sosmed orang_`
+}
+exports.Hoja = () => {
+    return `\n_Mencari sesuatu yang gk penting_`
+}
+exports.CovertWi = () => {
+    return `\n_Mengkorversi sesuatu dengan bot_`
+}
+exports.AnuFoto = () => {
+    return `\n_Mengubah gambar jadi lebih menarik_`
+}
+exports.HajuStik = () => {
+    return `\n_Membuat stiker yang unik_`
+}
+exports.EloDown= () => {
+    return `\n_Menampilkan fitur download_`
+}
+exports.StikerWibu = () => {
+    return `\n_Random stiker anime_`
+}
+exports.ImageDewasa = () => {
+    return `\n_Random image anime 18+_`
+}
+exports.MakeLogo = () => {
+    return `\n_Untuk membuat logo menggunakan bot_`
+}
+exports.oterMenu = () => {
+    return `\n_Menu lainnya_`
+}
+exports.GameBot = () => {
+    return `\n_Fitur untuk bermain dengan bot_`
+}
+exports.RandRik = () => {
+    return `\n_Random video tiktok_`
+}
+exports.RandCew = () => {
+    return `\n_Random gambar cewe cantik_`
+}
+exports.RamalOi = () => {
+    return `\n_Ramalan masa kini_`
+}
+exports.TeleStik= () => {
+    return `\n_Random stiker dari telegram_`
+}
+exports.BuatLogoLagi = () => {
+    return `\n_Membuat logo keren dengan bot_`
+}
+exports.SoundNih= () => {
+    return `\n_Random sound_`
+}
+exports.KanLogoLagi = () => {
+    return `\n_Membuat logo menarik_`
+}
+exports.TobatBro = () => {
+    return `\n_Fitur islami_`
+}
+exports.MauJualan = () => {
+    return `\n_Fitur untuk berjualan_`
+}
+exports.GadaChat = () => {
+    return `\n_Fitur untuk melakukan chat random_`
+}
+exports.SumberBot = () => {
+    return `\n_Sumber script bot ini_`
+}
+exports.Tqnya = () => {
+    return `\n_Siapa aja yang berkontribusi di dalam bot ini_`
+}
+exports.SetAh = () => {
+    return `Mau set menu ya ?`
+}
+exports.KickAh = (gc) => {
+    return `*Antilink Group Terdeteksi*\n\nKamu akan dikeluarkan dari group ${gc}`
+    }
+    exports.GjdKick = () => {
+    return `Sepertinya kamu mengirimkan link group ini, kamu tidak akan di keluarkan`
+    }
+/////////
+
+/////////
+exports.private = () =>{
+	return`Fitur hanya bisa di gunakan di private chat`
+	}
+exports.wait = () => {
+    return `⏳ Mohon tunggu sebentar`
+}
 exports.ok = () => {
-    return `done`
+    return `✅ Done.`
 }
 
 exports.err = () => {
-    return `More features Error`
+    return `⚠️ Fitur Sedang Error`
 }
 exports.erorLink = () => {
-    return `The link is error`
+    return `⚠️ Link nya error`
 }
 exports.media = () => {
-    return `Please select the media you want to download`
+    return `Silahkan pilih media yang ingin kamu download`
 }
 exports.replyImg = (prefix, command) => {
-    return `Send/Reply Photo With Caption ${prefix + command}`
+    return `Kirim/Reply Foto Dengan Caption ${prefix + command}`
 }
 
 exports.wrongFormat = (prefix) => {
-    return `Incorrect format ❎ Please check how to use in *${prefix}allmenu*.`
+    return `Format salah ❎ Silakan cek cara penggunaan di *${prefix}allmenu*.`
 }
 
 exports.emptyMess = () => {
-    return `Please enter the message you want to convey!`
+    return `❎ Harap masukkan pesan yang ingin disampaikan!`
 }
 
 exports.cmdNotFound = (cmd, prefix) => {
-    return `Command *${cmd}* not registered in *${prefix}allmenu*`
+    return `❎ Command *${cmd}* tidak terdaftar di *${prefix}allmenu*`
 }
 
 exports.ownerOnly = () => {
-    return `This command is for the owner`
+    return `❎ Command ini khusus Owner`
 }
 
 exports.doneOwner = () => {
-    return `️It's finished`
+    return `✅  ️Sudah selesai, Owner ~`
 }
 
 exports.groupOnly = () => {
-    return `This command can only be used in groups!`
+    return `👥  Command ini hanya bisa digunakan di dalam grup!`
 }
 
 exports.adminOnly = () => {
@@ -51,7 +545,7 @@ exports.adminOnly = () => {
 }
 
 exports.nhFalse = () => {
-    return `Invalid code!`
+    return `Kode tidak valid!`
 }
 
 exports.listBlock = (blockNumber) => {
@@ -61,919 +555,1913 @@ Total diblokir: *${blockNumber.length}* user\n`
 }
 
 exports.notAdmin = () => {
-    return `User is not an admin!`
+    return `❎ User bukan seorang admin! ❎`
 }
 
 exports.adminAlready = () => {
-    return `Cannot promote a user who is an admin!`
+    return `❎ Tidak  dapat mem-promote user yang merupakan admin!`
 }
 
 exports.botNotAdmin = () => {
-    return `Make the bot an admin first! 🙏`
+    return `Jadikan bot sebagai admin terlebih dahulu! 🙏`
 }
 
 exports.received = (pushname) => {
     return `
 Halo ${pushname}!
-Thank you for reporting, I will not respond to your report.`
+Terima kasih telah melapor, laporanmu akan kami segera terima.`
 }
 
 exports.videoLimit = () => {
-    return `The file size is too big!`
+    return `Ukuran file terlalu besar!`
 }
 
 exports.notNum = (q) => {
-    return `"${q}", not numbers!`
+    return `"${q}", bukan angka!`
 }
-exports.menunya = () =>{
-	return`Hi I'm Scritle-MD, public bot Handra Joestar.
+exports.menunya = (salam, pushname, botname) =>{
+	return`Hai kak ${pushname} 👋 selamat ${salam} , 
+saya ${botname}, bot ini adalah Beta Multi-Device Whatsapp.
 `
 }
 exports.listMenu = (time, salam, pushname, prefix) => {
     return `*Selamat ${salam} ${pushname}*
 *⌚Time Server : ${time}*
-*📚 List-Menu Scritle :*
+*📚 List-Menu Alphabot-Md :*
 
-「 Bot Info 」 
-𐁘. ${prefix}owner
-𐁘. ${prefix}rules
-𐁘. ${prefix}sc
-𐁘. ${prefix}ping
-𐁘. ${prefix}runtime
-𐁘. ${prefix}botstatus
-𐁘. ${prefix}donate
+╭─❒ 「 Bot Info 」 
+├ ${prefix}owner
+├ ${prefix}rules
+├ ${prefix}sc
+├ ${prefix}ping
+├ ${prefix}runtime
+├ ${prefix}botstatus
+╰❒ ${prefix}donate
 
-「 Owner 」 
-𐁘. ${prefix}setmenu [query]
-𐁘. ${prefix}setmenu templateLocation
-𐁘. ${prefix}setmenu templateTenor
-𐁘. ${prefix}setmenu katalog
-𐁘. ${prefix}setmenu katalog2
-𐁘. ${prefix}setmenu list
-𐁘. ${prefix}setwm packname|author
-𐁘. ${prefix}sendsesi
-𐁘. ${prefix}listpc
-𐁘. ${prefix}listgc
-𐁘. ${prefix}broadcast [text]
-𐁘. ${prefix}bc [text]
-𐁘. ${prefix}bcgc [text]
-𐁘. ${prefix}nsfw [on/off]
-𐁘. ${prefix}autorespond [on/off]
-𐁘. ${prefix}antiviewonce [on/off]
-𐁘. ${prefix}join [link]
-𐁘. ${prefix}self
-𐁘. ${prefix}public [only bot]
-𐁘. ${prefix}del [reply pesan bot]
-𐁘. ${prefix}setppbot [reply image]
 
-「 Database 」 
-𐁘. ${prefix}setcmd [reply stiker]
-𐁘. ${prefix}delcmd [reply stiker]
-𐁘. ${prefix}listcmd
-𐁘. ${prefix}absen
-𐁘. ${prefix}cekabsen
-𐁘. ${prefix}deleteabsen
-𐁘. ${prefix}absenstart
-𐁘. ${prefix}addmsg [nama file]
-𐁘. ${prefix}getmsg [nama file]
-𐁘. ${prefix}listmsg
-𐁘. ${prefix}delmsg [nama file]
+╭─❒ 「 Owner 」 
+├ < evaluate
+├ > evaluate
+├ $ exec
+├ => exec
+├ ${prefix}setmenu [query]
+├ ${prefix}setmenu templateLocation
+├ ${prefix}setmenu templateTenor
+├ ${prefix}setmenu katalog
+├ ${prefix}setmenu katalog2
+├ ${prefix}setmenu list
+├ ${prefix}setwm packname|author
+├ ${prefix}sendsesi
+├ ${prefix}listpc
+├ ${prefix}listgc
+├ ${prefix}broadcast [text]
+├ ${prefix}bc [text]
+├ ${prefix}bcgc [text]
+├ ${prefix}nsfw [on/off]
+├ ${prefix}mute [on/off]
+├ ${prefix}banchat
+├ ${prefix}unbanchat
+├ ${prefix}autorespond [on/off]
+├ ${prefix}antiviewonce [on/off]
+├ ${prefix}autobio [on/off]
+├ ${prefix}join [link]
+├ ${prefix}self
+├ ${prefix}public [only bot]
+├ ${prefix}del [reply pesan bot]
+╰❒ ${prefix}setppbot [reply image]
 
-「 Group 」 
-𐁘. ${prefix}listonline
-𐁘. ${prefix}sider
-𐁘. ${prefix}wm packname|author
-𐁘. ${prefix}infochat
-𐁘. ${prefix}setdesk [text]
-𐁘. ${prefix}setppgrup [reply image]
-𐁘. ${prefix}antilink [on/off]
-𐁘. ${prefix}revoke
-𐁘. ${prefix}leave
-𐁘. ${prefix}add [62***]
-𐁘. ${prefix}kick @tag
-𐁘. ${prefix}leave
-𐁘. ${prefix}linkgc
-𐁘. ${prefix}take packname|author
-𐁘. ${prefix}group [open/close]
-𐁘. ${prefix}tagall [text]
-𐁘. ${prefix}hidetag [text]
+╭─❒ 「 Store Menu 」
+├ ${prefix}list
+├ ${prefix}addlist [key|respond]
+├ ${prefix}dellist [key]
+├ ${prefix}update [key|respond]
+├ ${prefix}store
+├ ${prefix}kali
+├ ${prefix}bagi
+├ ${prefix}tambah
+├ ${prefix}kurang
+├ ${prefix}kalkulator
+├ ${prefix}proses
+╰❒ ${prefix}done [surah|ayat]
 
-「 Anime 」 
-𐁘. ${prefix}quotesanime
-𐁘. ${prefix}anime [query]
-𐁘. ${prefix}manga [query]
-𐁘. ${prefix}character [query]
+╭─❒ 「 Anonymous 」
+├ ${prefix}anonymous 
+├ ${prefix}start
+├ ${prefix}skip [daerah]
+╰❒ ${prefix}stop [surah|ayat]
 
-「 Tag 」 
-𐁘. ${prefix}stickertag
-𐁘. ${prefix}videotag [query]
-𐁘. ${prefix}vntag [query]
-𐁘. ${prefix}imagetag [query]
 
-「 Stalking 」 
-𐁘. ${prefix}igstalk [username]
-𐁘. ${prefix}ghstalk [username]
-𐁘. ${prefix}ytstalk [channel]
+╭─❒ 「 Database 」 
+├ ${prefix}setcmd [reply stiker]
+├ ${prefix}delcmd [reply stiker]
+├ ${prefix}listcmd
+├ ${prefix}absen
+├ ${prefix}cekabsen
+├ ${prefix}deleteabsen
+├ ${prefix}absenstart
+├ ${prefix}addmsg [nama file]
+├ ${prefix}getmsg [nama file]
+├ ${prefix}listmsg
+╰❒ ${prefix}delmsg [nama file]
 
-「 Search 」 
-𐁘. ${prefix}ytsearch [query]
-𐁘. ${prefix}wallpaper [query]
-𐁘. ${prefix}wikimedia [query]
-𐁘. ${prefix}wattpad [query]
-𐁘. ${prefix}webtoons [query]
-𐁘. ${prefix}drakor [query]
-𐁘. ${prefix}pinterest [query]
 
-「 Converter 」
-𐁘. ${prefix}toaudio [video]
-𐁘. ${prefix}tomp3 [video]
-𐁘. ${prefix}tovn [video]
-𐁘. ${prefix}stiker [reply image]
-𐁘. ${prefix}tourl [image/video/stiker]
-𐁘. ${prefix}togif [sticker]
-𐁘. ${prefix}tomp4 [sticker]
-𐁘. ${prefix}toimg [reply sticker]
+╭─❒ 「 Group 」 
+├ ${prefix}listonline
+├ ${prefix}sider
+├ ${prefix}wm packname|author
+├ ${prefix}infochat
+├ ${prefix}setdesk [text]
+├ ${prefix}setppgrup [reply image]
+├ ${prefix}antilink [on/off]
+├ ${prefix}revoke
+├ ${prefix}leave
+├ ${prefix}add [62***]
+├ ${prefix}kick @tag
+├ ${prefix}leave
+├ ${prefix}linkgc
+├ ${prefix}take packname|author
+├ ${prefix}group [open/close]
+├ ${prefix}tagall [text]
+╰❒ ${prefix}hidetag [text]
 
-「 Image Effect 」 
-𐁘. ${prefix}wanted [reply image/stiker]
-𐁘. ${prefix}utatoo [reply image/stiker]
-𐁘. ${prefix}unsharpen [reply image/stiker]
-𐁘. ${prefix}thanos [reply image/stiker]
-𐁘. ${prefix}sniper [reply image/stiker]
-𐁘. ${prefix}sharpen [reply image/stiker]
-𐁘. ${prefix}sepia [reply image/stiker]
-𐁘. ${prefix}scary [reply image/stiker]
-𐁘. ${prefix}rip [reply image/stiker]
-𐁘. ${prefix}redple [reply image/stiker]
-𐁘. ${prefix}rejected [reply image/stiker]
-𐁘. ${prefix}posterize [reply image/stiker]
-𐁘. ${prefix}ps4 [reply image/stiker]
-𐁘. ${prefix}pixelize [reply image/stiker]
-𐁘. ${prefix}missionpassed [reply image/stiker]
-𐁘. ${prefix}moustache [reply image/stiker]
-𐁘. ${prefix}lookwhatkarenhave [reply image/stiker]
-𐁘. ${prefix}jail [reply image/stiker]
-𐁘. ${prefix}invert [reply image/stiker]
-𐁘. ${prefix}instagram [reply image/stiker]
-𐁘. ${prefix}greyscale [reply image/stiker]
-𐁘. ${prefix}glitch [reply image/stiker]
-𐁘. ${prefix}gay [reply image/stiker]
-𐁘. ${prefix}frame [reply image/stiker]
-𐁘. ${prefix}fire [reply image/stiker]
-𐁘. ${prefix}distort [reply image/stiker]
-𐁘. ${prefix}dictator [reply image/stiker]
-𐁘. ${prefix}deepfry [reply image/stiker]
-𐁘. ${prefix}ddungeon [reply image/stiker]
-𐁘. ${prefix}circle [reply image/stiker]
-𐁘. ${prefix}challenger [reply image/stiker]
-𐁘. ${prefix}burn [reply image/stiker]
-𐁘. ${prefix}brazzers [reply image/stiker]
-𐁘. ${prefix}beautiful [reply image/stiker]
+╭─❒ 「 Anime 」 
+├ ${prefix}quotesanime
+├ ${prefix}anime [query]
+├ ${prefix}manga [query]
+╰❒ ${prefix}character [query]
 
-「 Sticker Effect 」 
-𐁘. ${prefix}jail [reply image/stiker]
-𐁘. ${prefix}red [reply image/stiker]
-𐁘. ${prefix}gay [reply image/stiker]
-𐁘. ${prefix}bloo [reply image/stiker]
-𐁘. ${prefix}blue [reply image/stiker]
-𐁘. ${prefix}sepia [reply image/stiker]
-𐁘. ${prefix}green [reply image/stiker]
-𐁘. ${prefix}glass [reply image/stiker]
-𐁘. ${prefix}invert [reply image/stiker]
-𐁘. ${prefix}blurple [reply image/stiker]
-𐁘. ${prefix}blurple2 [reply image/stiker]
-𐁘. ${prefix}wasted [reply image/stiker]
-𐁘. ${prefix}passed [reply image/stiker]
-𐁘. ${prefix}triggered [reply image/stiker]
-𐁘. ${prefix}comrade [reply image/stiker]
-𐁘. ${prefix}greyscale [reply image/stiker]
-𐁘. ${prefix}threshold [reply image/stiker]
-𐁘. ${prefix}brightness [reply image/stiker]
-𐁘. ${prefix}invertgreyscale [reply image/stiker]
+╭─❒ 「 Tag 」 
+├ ${prefix}stickertag
+├ ${prefix}videotag [query]
+├ ${prefix}vntag [query]
+╰❒ ${prefix}imagetag [query]
 
-「 Download 」 
-𐁘. ${prefix}tiktok [link]
-𐁘. ${prefix}tiktoknowm [link]
-𐁘. ${prefix}tiktokwm [link]
-𐁘. ${prefix}tiktokaudio [link]
-𐁘. ${prefix}ytdl [link]
-𐁘. ${prefix}play [query]
-𐁘. ${prefix}ytmp3 [link]
-𐁘. ${prefix}ytshortmp3 [link]
-𐁘. ${prefix}ytmp4 [link]
-𐁘. ${prefix}ytshorts [link]
-𐁘. ${prefix}facebook [link]
-𐁘. ${prefix}facebooksd [link]
-𐁘. ${prefix}facebookhd [link]
-𐁘. ${prefix}fbaudio [link]
-𐁘. ${prefix}igstory [username]
-𐁘. ${prefix}igdl [link]
-𐁘. ${prefix}igphoto [link]
-𐁘. ${prefix}igvideo [link]
-𐁘. ${prefix}igreels [link]
-𐁘. ${prefix}igtv [link]
-𐁘. ${prefix}soundcloud [link]
-𐁘. ${prefix}gitclone [link repo]
-𐁘. ${prefix}gitrepo [username repo branch]
-𐁘. ${prefix}mediafire [link]
-𐁘. ${prefix}twitter link
+╭─❒ 「 Stalking 」 
+├ ${prefix}igstalk [username]
+├ ${prefix}ghstalk [username]
+╰❒ ${prefix}ytstalk [channel]
 
-「 Primbon 」
-𐁘. ${prefix}nomorhoki 887435047326
-𐁘. ${prefix}artimimpi [query]
-𐁘. ${prefix}artinama [query]
-𐁘. ${prefix}ramaljodoh
-𐁘. ${prefix}ramaljodohbali
-𐁘. ${prefix}suamiistri
-𐁘. ${prefix}ramalcinta
-𐁘. ${prefix}cocoknama
-𐁘. ${prefix}pasangan
-𐁘. ${prefix}jadiannikah
-𐁘. ${prefix}sifatusaha
-𐁘. ${prefix}rezeki
-𐁘. ${prefix}pekerjaan
-𐁘. ${prefix}nasib
-𐁘. ${prefix}penyakit
-𐁘. ${prefix}tarot
-𐁘. ${prefix}fengshui
-𐁘. ${prefix}haribaik
-𐁘. ${prefix}harisangar
-𐁘. ${prefix}harisial
-𐁘. ${prefix}nagahari
-𐁘. ${prefix}arahrezeki
-𐁘. ${prefix}peruntungan
-𐁘. ${prefix}weton
-𐁘. ${prefix}karakter
-𐁘. ${prefix}keberuntungan
-𐁘. ${prefix}memancing
-𐁘. ${prefix}masasubur
-𐁘. ${prefix}zodiak 
-𐁘. ${prefix}shio [query]
 
-「 Random Anime 」
-𐁘. ${prefix}loli
-𐁘. ${prefix}neko
-𐁘. ${prefix}waifu
-𐁘. ${prefix}shinobu
-𐁘. ${prefix}megumin
-𐁘. ${prefix}bully
-𐁘. ${prefix}cuddle
-𐁘. ${prefix}cry
-𐁘. ${prefix}hug
-𐁘. ${prefix}awoo
-𐁘. ${prefix}kiss
-𐁘. ${prefix}lick
-𐁘. ${prefix}pat
-𐁘. ${prefix}smug
-𐁘. ${prefix}bonk
-𐁘. ${prefix}yeet
-𐁘. ${prefix}blush
-𐁘. ${prefix}smile
-𐁘. ${prefix}wave
-𐁘. ${prefix}highfive
-𐁘. ${prefix}handhold
-𐁘. ${prefix}nom
-𐁘. ${prefix}bite
-𐁘. ${prefix}glomp
-𐁘. ${prefix}slap
-𐁘. ${prefix}kill
-𐁘. ${prefix}happy
-𐁘. ${prefix}wink
-𐁘. ${prefix}poke
-𐁘. ${prefix}dance
-𐁘. ${prefix}cringe
+╭─❒ 「 Search 」 
+├ ${prefix}ytsearch [query]
+├ ${prefix}wallpaper [query]
+├ ${prefix}google [query]
+├ ${prefix}wikimedia [query]
+├ ${prefix}hentai
+├ ${prefix}wattpad [query]
+├ ${prefix}webtoons [query]
+├ ${prefix}drakor [query]
+╰❒ ${prefix}pinterest [query]
 
-「 Others 」
-𐁘. ${prefix}afk [reason]
-𐁘. ${prefix}smeme [text]
-𐁘. ${prefix}smeme2 [text|text]
-𐁘. ${prefix}memegen [text|text]
 
-「 Game Menu 」
-𐁘. ${prefix}kuismath
-𐁘. ${prefix}tebak [option]
-𐁘. ${prefix}tekateki
-𐁘. ${prefix}susunkata
-𐁘. ${prefix}caklontong
+╭─❒ 「 Converter 」
+├ ${prefix}toaudio [video]
+├ ${prefix}tomp3 [video]
+├ ${prefix}tovn [video]
+├ ${prefix}stiker [reply image]
+├ ${prefix}tourl [image/video/stiker]
+├ ${prefix}togif [sticker]
+├ ${prefix}tomp4 [sticker]
+╰❒${prefix}toimg [reply sticker]
 
-「 Telegram Sticker 」
-𐁘. ${prefix}awoawo
-𐁘. ${prefix}benedict
-𐁘. ${prefix}chat
-𐁘. ${prefix}dbfly
-𐁘. ${prefix}dino_kuning
-𐁘. ${prefix}doge
-𐁘. ${prefix}gojosatoru
-𐁘. ${prefix}hope_boy
-𐁘. ${prefix}jisoo
-𐁘. ${prefix}kr_robot
-𐁘. ${prefix}kucing
-𐁘. ${prefix}manusia_lidi
-𐁘. ${prefix}menjamet
-𐁘. ${prefix}meow
-𐁘. ${prefix}nicholas
-𐁘. ${prefix}patrick
-𐁘. ${prefix}popoci
-𐁘. ${prefix}sponsbob
-𐁘. ${prefix}kawan_sponsbob
-𐁘. ${prefix}tyni
 
-「 TqTo 」 
-My waifu and nothing elsee.
+╭─❒ 「 Image Effect 」 
+├ ${prefix}wanted [reply image/stiker]
+├ ${prefix}utatoo [reply image/stiker]
+├ ${prefix}unsharpen [reply image/stiker]
+├ ${prefix}thanos [reply image/stiker]
+├ ${prefix}sniper [reply image/stiker]
+├ ${prefix}sharpen [reply image/stiker]
+├ ${prefix}sepia [reply image/stiker]
+├ ${prefix}scary [reply image/stiker]
+├ ${prefix}rip [reply image/stiker]
+├ ${prefix}redple [reply image/stiker]
+├ ${prefix}rejected [reply image/stiker]
+├ ${prefix}posterize [reply image/stiker]
+├ ${prefix}ps4 [reply image/stiker]
+├ ${prefix}pixelize [reply image/stiker]
+├ ${prefix}missionpassed [reply image/stiker]
+├ ${prefix}moustache [reply image/stiker]
+├ ${prefix}lookwhatkarenhave [reply image/stiker]
+├ ${prefix}jail [reply image/stiker]
+├ ${prefix}invert [reply image/stiker]
+├ ${prefix}instagram [reply image/stiker]
+├ ${prefix}greyscale [reply image/stiker]
+├ ${prefix}glitch [reply image/stiker]
+├ ${prefix}gay [reply image/stiker]
+├ ${prefix}frame [reply image/stiker]
+├ ${prefix}fire [reply image/stiker]
+├ ${prefix}distort [reply image/stiker]
+├ ${prefix}dictator [reply image/stiker]
+├ ${prefix}deepfry [reply image/stiker]
+├ ${prefix}ddungeon [reply image/stiker]
+├ ${prefix}circle [reply image/stiker]
+├ ${prefix}challenger [reply image/stiker]
+├ ${prefix}burn [reply image/stiker]
+├ ${prefix}brazzers [reply image/stiker]
+╰❒ ${prefix}beautiful [reply image/stiker]
+
+
+╭─❒ 「 Sticker Effect 」 
+├ ${prefix}jail [reply image/stiker]
+├ ${prefix}red [reply image/stiker]
+├ ${prefix}gay [reply image/stiker]
+├ ${prefix}bloo [reply image/stiker]
+├ ${prefix}blue [reply image/stiker]
+├ ${prefix}sepia [reply image/stiker]
+├ ${prefix}green [reply image/stiker]
+├ ${prefix}glass [reply image/stiker]
+├ ${prefix}invert [reply image/stiker]
+├ ${prefix}blurple [reply image/stiker]
+├ ${prefix}blurple2 [reply image/stiker]
+├ ${prefix}wasted [reply image/stiker]
+├ ${prefix}passed [reply image/stiker]
+├ ${prefix}triggered [reply image/stiker]
+├ ${prefix}comrade [reply image/stiker]
+├ ${prefix}greyscale [reply image/stiker]
+├ ${prefix}threshold [reply image/stiker]
+├ ${prefix}brightness [reply image/stiker]
+╰❒ ${prefix}invertgreyscale [reply image/stiker]
+
+
+╭─❒ 「 Download 」 
+├ ${prefix}tiktok [link]
+├ ${prefix}tiktoknowm [link]
+├ ${prefix}tiktokwm [link]
+├ ${prefix}tiktokaudio [link]
+├ ${prefix}ytdl [link]
+├ ${prefix}play [query]
+├ ${prefix}ytmp3 [link]
+├ ${prefix}ytshortmp3 [link]
+├ ${prefix}ytmp4 [link]
+├ ${prefix}ytshorts [link]
+├ ${prefix}facebook [link]
+├ ${prefix}facebooksd [link]
+├ ${prefix}facebookhd [link]
+├ ${prefix}fbaudio [link]
+├ ${prefix}igstory [username]
+├ ${prefix}igdl [link]
+├ ${prefix}igphoto [link]
+├ ${prefix}igvideo [link]
+├ ${prefix}igreels [link]
+├ ${prefix}igtv [link]
+├ ${prefix}soundcloud [link]
+├ ${prefix}gitclone [link repo]
+├ ${prefix}gitrepo [username repo branch]
+├ ${prefix}mediafire [link]
+╰❒ ${prefix}twitter link
+
+╭─❒ 「 Primbon 」
+├ ${prefix}nomorhoki 887435047326
+├ ${prefix}artimimpi [query]
+├ ${prefix}artinama [query]
+├ ${prefix}ramaljodoh
+├ ${prefix}ramaljodohbali
+├ ${prefix}suamiistri
+├ ${prefix}ramalcinta
+├ ${prefix}cocoknama
+├ ${prefix}pasangan
+├ ${prefix}jadiannikah
+├ ${prefix}sifatusaha
+├ ${prefix}rezeki
+├ ${prefix}pekerjaan
+├ ${prefix}nasib
+├ ${prefix}penyakit
+├ ${prefix}tarot
+├ ${prefix}fengshui
+├ ${prefix}haribaik
+├ ${prefix}harisangar
+├ ${prefix}harisial
+├ ${prefix}nagahari
+├ ${prefix}arahrezeki
+├ ${prefix}peruntungan
+├ ${prefix}weton
+├ ${prefix}karakter
+├ ${prefix}keberuntungan
+├ ${prefix}memancing
+├ ${prefix}masasubur
+├ ${prefix}zodiak 
+╰❒ ${prefix}shio [query]
+
+╭─❒ 「 Random Anime 」
+├ ${prefix}loli
+├ ${prefix}neko
+├ ${prefix}waifu
+├ ${prefix}shinobu
+├ ${prefix}megumin
+├ ${prefix}bully
+├ ${prefix}cuddle
+├ ${prefix}cry
+├ ${prefix}hug
+├ ${prefix}awoo
+├ ${prefix}kiss
+├ ${prefix}lick
+├ ${prefix}pat
+├ ${prefix}smug
+├ ${prefix}bonk
+├ ${prefix}yeet
+├ ${prefix}blush
+├ ${prefix}smile
+├ ${prefix}wave
+├ ${prefix}highfive
+├ ${prefix}handhold
+├ ${prefix}nom
+├ ${prefix}bite
+├ ${prefix}glomp
+├ ${prefix}slap
+├ ${prefix}kill
+├ ${prefix}happy
+├ ${prefix}wink
+├ ${prefix}poke
+├ ${prefix}dance
+╰❒ ${prefix}cringe
+
+╭─❒ 「 Nsfw & Sfw 」
+├ ${prefix}ahegao
+├ ${prefix}ass
+├ ${prefix}bdsm
+├ ${prefix}blowjob
+├ ${prefix}cuckold
+├ ${prefix}cum
+├ ${prefix}ero
+├ ${prefix}femdom
+├ ${prefix}foot
+├ ${prefix}gangbang
+├ ${prefix}glasses
+├ ${prefix}jahy
+├ ${prefix}manga
+├ ${prefix}masturbation
+├ ${prefix}neko
+├ ${prefix}orgy
+├ ${prefix}panties
+├ ${prefix}pussy
+├ ${prefix}tentacles
+├ ${prefix}thighs
+├ ${prefix}yuri
+├ ${prefix}feet
+├ ${prefix}lewdkemo
+├ ${prefix}woof
+├ ${prefix}gasm
+├ ${prefix}solo
+├ ${prefix}8ball
+├ ${prefix}goose
+├ ${prefix}avatar
+├ ${prefix}hololewd
+├ ${prefix}gecg
+├ ${prefix}holo
+├ ${prefix}fox_girl
+├ ${prefix}tits
+├ ${prefix}eroyuri
+├ ${prefix}holoyero
+├ ${prefix}lizard
+├ ${prefix}keta
+├ ${prefix}eron
+├ ${prefix}erok
+├ ${prefix}kemonomimi
+├ ${prefix}cum_jpg
+├ ${prefix}nsfw_avatar
+├ ${prefix}erofeet
+├ ${prefix}meow
+├ ${prefix}wallpaper
+├ ${prefix}waifu
+├ ${prefix}trap
+├ ${prefix}lewd
+├ ${prefix}pussy_jpg
+├ ${prefix}futanari
+├ ${prefix}lewdk
+├ ${prefix}solog
+├ ${prefix}smug
+├ ${prefix}cum
+├ ${prefix}slap
+├ ${prefix}les
+├ ${prefix}erokemo
+├ ${prefix}bj
+├ ${prefix}pwankg
+├ ${prefix}pat
+├ ${prefix}poke
+├ ${prefix}feed
+├ ${prefix}nsfw_neko_gif
+├ ${prefix}pussy
+├ ${prefix}feetg
+├ ${prefix}baka
+├ ${prefix}hug
+├ ${prefix}kiss
+├ ${prefix}tickle
+├ ${prefix}spank
+├ ${prefix}kuni
+├ ${prefix}classic
+├ ${prefix}boobs
+├ ${prefix}anal
+├ ${prefix}ngif
+├ ${prefix}cuddle
+╰❒ ${prefix}zettai
+
+╭─❒ 「 Ephoto360 Menu 」
+├ ${prefix}youtubegold
+├ ${prefix}youtubesilver
+├ ${prefix}facebookgold
+├ ${prefix}facebooksilver
+├ ${prefix}instagramgold
+├ ${prefix}instagramsilver
+├ ${prefix}twittergold
+├ ${prefix}twittersilver
+├ ${prefix}retrotext
+├ ${prefix}halloweenbats
+├ ${prefix}texthalloween
+├ ${prefix}cardhalloween
+├ ${prefix}birthdaycake
+├ ${prefix}thundertext
+├ ${prefix}icetext
+├ ${prefix}milkcake
+├ ${prefix}snowontext
+├ ${prefix}metalstar
+├ ${prefix}dragonfire
+├ ${prefix}zombie3d
+├ ${prefix}merrycard
+├ ${prefix}generalexam 
+├ ${prefix}viettel
+├ ${prefix}embroider
+├ ${prefix}graffititext
+├ ${prefix}graffititext2
+├ ${prefix}graffititext3
+├ ${prefix}covergraffiti
+├ ${prefix}moderngold
+├ ${prefix}capercut
+├ ${prefix}lovecard
+├ ${prefix}heartflashlight
+├ ${prefix}heartcup
+├ ${prefix}sunglightshadow
+├ ${prefix}graffiti3d
+├ ${prefix}moderngoldsilver
+├ ${prefix}moderngold2
+├ ${prefix}moderngold3
+├ ${prefix}fabrictext
+├ ${prefix}masteryavatar
+├ ${prefix}messagecoffee
+├ ${prefix}announofwin
+├ ${prefix}writeblood
+├ ${prefix}horrorletter
+├ ${prefix}writehorror
+├ ${prefix}shirtclub
+├ ${prefix}angelwing
+├ ${prefix}christmasseason
+├ ${prefix}projectyasuo
+├ ${prefix}lovelycute
+├ ${prefix}womansday
+├ ${prefix}covergamepubg
+├ ${prefix}nameonheart
+├ ${prefix}funnyhalloween
+├ ${prefix}lightningpubg
+├ ${prefix}greetingcardvideo 
+├ ${prefix}christmascard 
+├ ${prefix}galaxybat
+├ ${prefix}writegalaxy
+├ ${prefix}starsnight
+├ ${prefix}noeltext
+├ ${prefix}textcakes
+├ ${prefix}pubgbirthday
+├ ${prefix}galaxywallpaper
+├ ${prefix}pubgglicthvideo 
+├ ${prefix}pubgmascotlogo
+├ ${prefix}realembroidery
+├ ${prefix}vintagetelevision
+├ ${prefix}funnyanimations
+├ ${prefix}glowingtext
+├ ${prefix}textonglass
+├ ${prefix}cartoonstyle
+├ ${prefix}multicolor
+├ ${prefix}watercolor2
+├ ${prefix}textsky
+├ ${prefix}summerbeach
+├ ${prefix}1917text
+├ ${prefix}puppycute
+╰❒ ${prefix}rosebirthday
+
+
+╭─❒ 「 Textpro Menu 」
+├ ${prefix}halloween2 text|text2
+├ ${prefix}horror text|text2
+├ ${prefix}game8bit text|text2
+├ ${prefix}layered text|text2
+├ ${prefix}glitch2 text|text2
+├ ${prefix}coolg text|text2
+├ ${prefix}coolwg text|text2
+├ ${prefix}realistic text|text2
+├ ${prefix}space3d text|text2
+├ ${prefix}gtiktok text|text2
+├ ${prefix}stone text|text2
+├ ${prefix}marvel text|text2
+├ ${prefix}marvel2 text|text2
+├ ${prefix}pornhub text|text2
+├ ${prefix}avengers text|text2
+├ ${prefix}metalr text|text2
+├ ${prefix}metalg text|text2
+├ ${prefix}metalg2 text|text2
+├ ${prefix}halloween2 text|text2
+├ ${prefix}lion text|text2
+├ ${prefix}wolf_bw text|text2
+├ ${prefix}wolf_g text|text2
+├ ${prefix}ninja text|text2
+├ ${prefix}3dsteel text|text2
+├ ${prefix}horror2 text|text2
+├ ${prefix}lava text|text2
+├ ${prefix}bagel text|text2
+├ ${prefix}blackpink text
+├ ${prefix}rainbow2 text
+├ ${prefix}water_pipe text
+├ ${prefix}halloween text
+├ ${prefix}sketch text
+├ ${prefix}sircuit text
+├ ${prefix}discovery text
+├ ${prefix}metallic2 text
+├ ${prefix}fiction text
+├ ${prefix}demon text
+├ ${prefix}transformer text
+├ ${prefix}berry text
+├ ${prefix}thunder text
+├ ${prefix}magma text
+├ ${prefix}3dstone text
+├ ${prefix}neon text
+├ ${prefix}glitch text
+├ ${prefix}harry_potter text
+├ ${prefix}embossed text
+├ ${prefix}broken text
+├ ${prefix}papercut text
+├ ${prefix}gradient text
+├ ${prefix}glossy text
+├ ${prefix}watercolor text
+├ ${prefix}multicolor text
+├ ${prefix}neon_devil text
+├ ${prefix}underwater text
+├ ${prefix}bear text
+├ ${prefix}wonderfulg text
+├ ${prefix}christmas text
+├ ${prefix}neon_light text
+├ ${prefix}snow text
+├ ${prefix}cloudsky text
+├ ${prefix}luxury2 text
+├ ${prefix}gradient2 text
+├ ${prefix}summer text
+├ ${prefix}writing text
+├ ${prefix}engraved text
+├ ${prefix}summery text
+├ ${prefix}3dglue text
+├ ${prefix}metaldark text
+├ ${prefix}neonlight text
+├ ${prefix}oscar text
+├ ${prefix}minion text
+├ ${prefix}holographic text
+├ ${prefix}purple text
+├ ${prefix}glossyb text
+├ ${prefix}deluxe2 text
+├ ${prefix}glossyc text
+├ ${prefix}fabric text
+├ ${prefix}neonc text
+├ ${prefix}newyear text
+├ ${prefix}newyear2 text
+├ ${prefix}metals text
+├ ${prefix}xmas text
+├ ${prefix}blood text
+├ ${prefix}darkg text
+├ ${prefix}joker text
+├ ${prefix}wicker text
+├ ${prefix}natural text
+├ ${prefix}firework text
+├ ${prefix}skeleton text
+├ ${prefix}balloon text
+├ ${prefix}balloon2 text
+├ ${prefix}balloon3 text
+├ ${prefix}balloon4 text
+├ ${prefix}balloon5 text
+├ ${prefix}balloon6 text
+├ ${prefix}balloon7 text
+├ ${prefix}steel text
+├ ${prefix}gloss text
+├ ${prefix}denim text
+├ ${prefix}decorate text
+├ ${prefix}decorate2 text
+├ ${prefix}peridot text
+├ ${prefix}rock text
+├ ${prefix}glass text
+├ ${prefix}glass2 text
+├ ${prefix}glass3 text
+├ ${prefix}glass4 text
+├ ${prefix}glass5 text
+├ ${prefix}glass6 text
+├ ${prefix}glass7 text
+├ ${prefix}glass8 text
+├ ${prefix}captain_as2 text
+├ ${prefix}robot text
+├ ${prefix}equalizer text
+├ ${prefix}toxic text
+├ ${prefix}sparkling text
+├ ${prefix}sparkling2 text
+├ ${prefix}sparkling3 text
+├ ${prefix}sparkling4 text
+├ ${prefix}sparkling5 text
+├ ${prefix}sparkling6 text
+├ ${prefix}sparkling7 text
+├ ${prefix}decorative text
+├ ${prefix}chocolate text
+├ ${prefix}strawberry text
+├ ${prefix}koifish text
+├ ${prefix}bread text
+├ ${prefix}matrix text
+├ ${prefix}blood2 text
+├ ${prefix}neonligth2 text
+├ ${prefix}thunder2 text
+├ ${prefix}3dbox text
+├ ${prefix}neon2 text
+├ ${prefix}roadw text
+├ ${prefix}bokeh text
+├ ${prefix}gneon text
+├ ${prefix}advanced text
+├ ${prefix}dropwater text
+├ ${prefix}wall text
+├ ${prefix}chrismast text
+├ ${prefix}honey text
+├ ${prefix}drug text
+├ ${prefix}marble text
+├ ${prefix}marble2 text
+├ ${prefix}ice text
+├ ${prefix}juice text
+├ ${prefix}rusty text
+├ ${prefix}abstra text
+├ ${prefix}biscuit text
+├ ${prefix}wood text
+├ ${prefix}scifi text
+├ ${prefix}metalr text
+├ ${prefix}purpleg text
+├ ${prefix}shiny text 
+├ ${prefix}jewelry text
+├ ${prefix}jewelry2 text
+├ ${prefix}jewelry3 text
+├ ${prefix}jewelry4 text
+├ ${prefix}jewelry5 text
+├ ${prefix}jewelry6 text
+├ ${prefix}jewelry7 text
+├ ${prefix}jewelry8 text
+├ ${prefix}metalh text
+├ ${prefix}golden text
+├ ${prefix}glitter text
+├ ${prefix}glitter2 text
+├ ${prefix}glitter3 text
+├ ${prefix}glitter4 text
+├ ${prefix}glitter5 text
+├ ${prefix}glitter6 text
+├ ${prefix}glitter7 text
+├ ${prefix}metale text
+├ ${prefix}carbon text
+├ ${prefix}candy text
+├ ${prefix}metalb text
+├ ${prefix}gemb text
+├ ${prefix}3dchrome text
+├ ${prefix}metalb2 text
+├ ${prefix}metalg text
+╰❒ ${prefix}metalg text
+
+
+╭─❒ 「 Others 」
+├ ${prefix}afk [reason]
+├ ${prefix}translate kode_bahasa text
+├ ${prefix}kalkulator [query]
+├ ${prefix}smeme [text]
+├ ${prefix}smeme2 [text|text]
+├ ${prefix}memegen [text|text]
+╰❒
+
+╭─❒ 「 Game Menu 」
+├ ${prefix}kuismath
+├ ${prefix}tebak [option]
+├ ${prefix}tekateki
+├ ${prefix}susunkata
+╰❒ ${prefix}caklontong
+
+
+╭─❒ 「 Asupan Menu 」
+├ ${prefix}chika
+├ ${prefix}delvira
+├ ${prefix}ayu
+├ ${prefix}bunga
+├ ${prefix}aura
+├ ${prefix}nisa
+├ ${prefix}ziva
+├ ${prefix}yana
+├ ${prefix}viona
+├ ${prefix}syania
+├ ${prefix}riri
+├ ${prefix}syifa
+├ ${prefix}mama_gina
+├ ${prefix}alcakenya
+├ ${prefix}mangayutri
+├ ${prefix}rikagusriani
+├ ${prefix}asupan
+├ ${prefix}bocil
+├ ${prefix}geayubi
+├ ${prefix}santuy
+├ ${prefix}ukhty
+╰❒ ${prefix}syifa
+
+╭─❒ 「 Telegram Sticker 」
+├ ${prefix}awoawo
+├ ${prefix}benedict
+├ ${prefix}chat
+├ ${prefix}dbfly
+├ ${prefix}dino_kuning
+├ ${prefix}doge
+├ ${prefix}gojosatoru
+├ ${prefix}hope_boy
+├ ${prefix}jisoo
+├ ${prefix}kr_robot
+├ ${prefix}kucing
+├ ${prefix}lonte
+├ ${prefix}manusia_lidi
+├ ${prefix}menjamet
+├ ${prefix}meow
+├ ${prefix}nicholas
+├ ${prefix}patrick
+├ ${prefix}popoci
+├ ${prefix}sponsbob
+├ ${prefix}kawan_sponsbob
+╰❒ ${prefix}tyni
+
+╭─❒ 「 Random Cewe 」
+├ ${prefix}china 
+├ ${prefix}indonesia 
+├ ${prefix}malaysia 
+├ ${prefix}thailand 
+├ ${prefix}korea 
+├ ${prefix}japan 
+├ ${prefix}vietnam 
+├ ${prefix}jenni 
+├ ${prefix}jiso 
+├ ${prefix}lisa  
+╰❒ ${prefix}rose
+
+╭─❒ 「 Logo Menu 」
+├ ${prefix}coverbannerlol text|heroes
+├ ${prefix}pubglogomaker text|style
+├ ${prefix}colorfulpubg text|color
+├ ${prefix}astronotspace text|style
+├ ${prefix}wallpaperaov text|heroes
+├ ${prefix}maketeamlogo text|style
+├ ${prefix}circlemarcotteam text|logo
+├ ${prefix}wallpaperml text|heroes
+├ ${prefix}dragonballfb text|character
+├ ${prefix}bannerofaov text|character
+├ ${prefix}effect3donbeach text|background
+├ ${prefix}cutegirlgamer text|logo
+├ ${prefix}footballteam text|logo
+├ ${prefix}beautifulshimmering text|champion
+├ ${prefix}pubgcutelogo text|logo
+├ ${prefix}elegantrotation text|logo
+├ ${prefix}logogamingassasin text|logo
+├ ${prefix}introvideomaker text|logo
+├ ${prefix}gaminglogo4fvs text|logo
+├ ${prefix}blueneon text|logo
+├ ${prefix}metalmascot text|logo
+├ ${prefix}anonymous2 text|style
+├ ${prefix}lolpentakill text|style
+├ ${prefix}avatarleagueofking text|style
+├ ${prefix}avatarff text|character
+├ ${prefix}overwatchwallpaper text|character
+├ ${prefix}rovwallpaperhd text|hero
+├ ${prefix}rovwallpaper text|avatar
+├ ${prefix}beautifulgalaxylol text|style
+├ ${prefix}crossfirecover text|character
+├ ${prefix}lolwallpaper text|wallpaper
+├ ${prefix}coverdota2 text|heroes
+├ ${prefix}coverleagueofking text|character
+├ ${prefix}avatar3q360 text|avatar
+├ ${prefix}coverofwarface text|character
+├ ${prefix}newlolavatar text|avatar
+├ ${prefix}csgocover text|background
+├ ${prefix}coverloknew text|hero
+├ ${prefix}coverfblol text|letters
+├ ${prefix}overwatchcover text|hero
+├ ${prefix}crossfirestyle text|avatar
+├ ${prefix}avatarlolbyname text|style
+├ ${prefix}lolcoverbyname text|avatar
+├ ${prefix}cyberhunterfb text|character
+├ ${prefix}coverfreefirefb text|character
+├ ${prefix}gamingmascot text|style
+├ ${prefix}coveronepiecefb text|character
+├ ${prefix}bannerytcsgo text|banner
+├ ${prefix}fbgamepubgcover text|template
+├ ${prefix}banneroflol text|text2|banner
+├ ${prefix}bannerofaov2 text|text2|banner
+├ ${prefix}teamlogo text|text2|background
+├ ${prefix}companylogo2 text|text2|background
+├ ${prefix}companylogo text|text2|background
+├ ${prefix}gradientlogo text|text2|background
+├ ${prefix}pencilsketch text|text2|icon
+├ ${prefix}gunlogogaming text|text2|background
+├ ${prefix}banneroffreefire text|text2|background
+├ ${prefix}letterlogos text|text2|thumb
+├ ${prefix}bannerofoverwatch text|text2|background
+├ ${prefix}bannerofapex text|text2|background
+├ ${prefix}bannerofpubg text|text2|background
+├ ${prefix}mascotstyle text|text2|thumb
+├ ${prefix}logoaccording text|text2|thumb
+╰❒ ${prefix}avataroverwatch text|text2|thumb
+
+
+╭─❒ 「 Islamic Menu 」
+├ ${prefix}asmaulhusna
+├ ${prefix}kisahnabi [nabi]
+├ ${prefix}jadwalshalat [daerah]
+├ ${prefix}randomquran
+├ ${prefix}randomquran2
+├ ${prefix}listsurah
+├ ${prefix}tafsirsurah [surah]
+╰❒ ${prefix}alquranaudio [surah|ayat]
+
+╭─❒ 「 Sound Menu 」
+├ ${prefix}sound1
+├ ${prefix}sound2
+├ ${prefix}sound3
+├ ${prefix}sound4
+├ ${prefix}sound5
+├ ${prefix}sound6
+├ ${prefix}sound7
+├ ${prefix}sound8
+├ ${prefix}sound9
+├ ${prefix}sound10
+├ ${prefix}sound11
+├ ${prefix}sound12
+├ ${prefix}sound13
+├ ${prefix}sound14
+├ ${prefix}sound15
+├ ${prefix}sound16
+├ ${prefix}sound17
+├ ${prefix}sound18 
+├ ${prefix}sound19
+├ ${prefix}sound20
+├ ${prefix}sound21
+├ ${prefix}sound22
+├ ${prefix}sound23
+├ ${prefix}sound24
+├ ${prefix}sound25
+├ ${prefix}sound26
+├ ${prefix}sound27
+├ ${prefix}sound28
+├ ${prefix}sound29
+├ ${prefix}sound30
+├ ${prefix}sound31
+├ ${prefix}sound32
+├ ${prefix}sound33
+├ ${prefix}sound34
+├ ${prefix}sound35
+├ ${prefix}sound36
+├ ${prefix}sound37
+├ ${prefix}sound38
+├ ${prefix}sound39
+├ ${prefix}sound40
+├ ${prefix}sound41
+├ ${prefix}sound42
+├ ${prefix}sound43
+├ ${prefix}sound44
+├ ${prefix}sound45
+├ ${prefix}sound46
+├ ${prefix}sound47
+├ ${prefix}sound48
+├ ${prefix}sound49
+├ ${prefix}sound50
+├ ${prefix}sound51
+├ ${prefix}sound52
+├ ${prefix}sound53
+├ ${prefix}sound54
+├ ${prefix}sound55
+├ ${prefix}sound56
+├ ${prefix}sound57
+├ ${prefix}sound58
+├ ${prefix}sound59
+├ ${prefix}sound60
+├ ${prefix}sound61
+├ ${prefix}sound62
+├ ${prefix}sound63
+├ ${prefix}sound64
+├ ${prefix}sound65
+├ ${prefix}sound66
+├ ${prefix}sound67
+├ ${prefix}sound68
+├ ${prefix}sound69
+╰❒ ${prefix}sound70
+
+╭─❒ 「 TqTo 」 
+├ My God
+├ My Parents
+├ Fatih A.
+├ Ferdi
+├ DikaArdnt
+├ Mhankbarbar
+├ Nurutomo
+├ Rashid
+├ ZeeoneOfc
+├ Penyedia Module
+╰❒ And All Support
     `
 }
 
-exports.rules = () => {
+exports.rules = (prefix) => {
     return `
 *── 「 RULES AND FAQ 」 ──*
 
-1. Jangan spam bot.
-Sanksi: *WARN/SOFT BLOCK*
+1. Jangan spam bot. 🙅
+2. Jangan telepon bot. ☎️
+3. Jangan membandingkan bot 👍
 
-2. Jangan telepon bot.
-Sanksi: *SOFT BLOCK*
+🗯️ Bot tidak atau lambat merespon ?
+➡️ Mungkin dipengaruhi oleh jaringan, signal, banned oleh Whatsapp dan beberapa asalan.
 
-3. Jangan mengeksploitasi bot.
-Sanksi: *PERMANENT BLOCK*
+🗯️ Dimana saya bisa mendapatkan Script dari bot ini ?
+➡️ Script ini bisa kalian dapatkan di YouTube ZEEONE OFC
 
-🗯️ Bot not or slow to respond?
-➡️ mungkin kamu jelek seperti owner
+🗯️ Boleh saya menambah ke grup?
+➡️ Untuk itu tergantung dari owner bot sendiri
 
-🗯️ kenapa bot menggunakan bahasa Inggris 
-➡️ biar estetik.
+🗯️ Prefixnya apa ya?
+➡️ Bot ini menggunakan multi prefix & bisa kamu gunakan tanpa prefix
 
-🗯️ Can I add to the group?
-➡️ Boleh, gausah minta izin Owner, ganggu aja
+Jika sudah dipahami rules-nya, silakan ketik *${prefix}menu* untuk memulai!
 
-🗯️ Is the Bot active 24 hours a day?
-➡️ ya, tapi bot mati setiap tanggal 27-1 Setiap bulan
+⚠️ Segala kebijakan dan ketentuan bot dapat berubah kapan saja 
 
-🗯️ Sis, how come the chat owner is not responding?
-➡️ ownernya lagi nonton anime, kamu mengganggu
-
-⚠️ All Scritle-MD policies and provisions are held by the owner and all policy changes, at any time the owner has the right to revoke, block users.
+Terimakasih! 
 `
 }
 exports.welcome = () =>{
-	return` 
-Gausah intro, kita gamau tau tentang kamu
-`
+	return`𝖩𝖺𝗇𝗀𝖺𝗇 𝗅𝗎𝗉𝖺 𝗂𝗇𝗍𝗋𝗈 𝗄𝖺𝗄 🤗
+	
+╭ 𝖭𝖺𝗆𝖺 :
+├ 𝖴𝗆𝗎𝗋 :
+├ 𝖦𝖾𝗇𝖽𝖾𝗋 :
+├ 𝖠𝗌𝗄𝗈𝗍 :
+╰❒ 𝖯𝖺𝗍𝗎𝗁𝗂 𝗋𝗎𝗅𝖾𝗌 𝗀𝗋𝗎𝗉 𝗒𝖺 𝗄𝖺k ~`
 }
-
 exports.leave = () =>{
-	return`
-dont come back again
-`
-
+	return`Yah kok out 😣 Mental aman kan kak >.<
+Goodbye`
 }
-
 exports.source = () =>{
 return`*------「 SOURCE CODE 」 ------*
 
-Base : https://github.com/whojoestar/
+Base : https://github.com/DikaArdnt/Hisoka-Morou
+Recode : https://youtube.com/playlist?list=PLFCglBzFPHG7vSQaa9S3P8yfla_d9w-2-
 `
-
 }
+exports.tos = (ownernomer) => {
+    return `
+*-------「 DONATE 」 -------*
 
-exports.tos = () => {
-    return `*-------「 GITHUB 」 -------*
-    
-https://github.com/whojoestar
-This is my Github
-thanks f0r those who have followed
+Hai kak ☺️ 
+Kalian bisa mendukung saya agar bot ini tetap up to date dengan cara donasi
+
+Berapapun donasi kalian akan sangat berarti 👍
+
+Thanks!
+
+Contact person Owner:
+wa.me/${ownernomer}
+
     `
 }
 
 exports.info = (prefix) =>{
-	return`「 Bot Info 」 
-𐁘. ${prefix}owner
-𐁘. ${prefix}rules
-𐁘. ${prefix}sc
-𐁘. ${prefix}ping
-𐁘. ${prefix}runtime
-𐁘. ${prefix}botstatus
+	return`╭─❒ 「 Bot Info 」 
+├ ${prefix}owner
+├ ${prefix}rules
+├ ${prefix}sc
+├ ${prefix}ping
+├ ${prefix}runtime
+├ ${prefix}botstatus
+╰❒ ${prefix}donate
 `}
 
 exports.ownermenu = (prefix) =>{
-return`「 Owner 」 
-𐁘. ${prefix}setmenu [query]
-𐁘. ${prefix}setmenu templateLocation
-𐁘. ${prefix}setmenu templateTenor
-𐁘. ${prefix}setmenu katalog
-𐁘. ${prefix}setmenu katalog2
-𐁘. ${prefix}setmenu list
-𐁘. ${prefix}setwm packname|author
-𐁘. ${prefix}sendsesi
-𐁘. ${prefix}listpc
-𐁘. ${prefix}listgc
-𐁘. ${prefix}broadcast [text]
-𐁘. ${prefix}bc [text]
-𐁘. ${prefix}bcgc [text]
-𐁘. ${prefix}nsfw [on/off]
-𐁘. ${prefix}autorespond [on/off]
-𐁘. ${prefix}antiviewonce [on/off]
-𐁘. ${prefix}join [link]
-𐁘. ${prefix}self
-𐁘. ${prefix}public [only bot]
-𐁘. ${prefix}del [pesan bot]
-𐁘. ${prefix}setppbot [reply image]
+return`╭─❒ 「 Owner 」 
+├ < evaluate
+├ > evaluate
+├ $ exec
+├ => exec
+├ ${prefix}setmenu [query]
+├ ${prefix}setmenu templateLocation
+├ ${prefix}setmenu templateTenor
+├ ${prefix}setmenu katalog
+├ ${prefix}setmenu katalog2
+├ ${prefix}setmenu list
+├ ${prefix}setwm packname|author
+├ ${prefix}sendsesi
+├ ${prefix}listpc
+├ ${prefix}listgc
+├ ${prefix}broadcast [text]
+├ ${prefix}bc [text]
+├ ${prefix}bcgc [text]
+├ ${prefix}nsfw [on/off]
+├ ${prefix}mute [on/off]
+├ ${prefix}banchat
+├ ${prefix}unbanchat
+├ ${prefix}autorespond [on/off]
+├ ${prefix}antiviewonce [on/off]
+├ ${prefix}autobio [on/off]
+├ ${prefix}join [link]
+├ ${prefix}self
+├ ${prefix}public [only bot]
+├ ${prefix}del [pesan bot]
+╰❒ ${prefix}setppbot [reply image]
 `}
 
 exports.database = (prefix) =>{
-	return`「 Database 」 
-𐁘. ${prefix}setcmd [reply stiker]
-𐁘. ${prefix}delcmd [reply stiker]
-𐁘. ${prefix}listcmd
-𐁘. ${prefix}absen
-𐁘. ${prefix}cekabsen
-𐁘. ${prefix}deleteabsen
-𐁘. ${prefix}absenstart
-𐁘. ${prefix}addmsg [nama file]
-𐁘. ${prefix}getmsg [nama file]
-𐁘. ${prefix}listmsg
-𐁘. ${prefix}delmsg [nama file]
+	return`╭─❒ 「 Database 」 
+├ ${prefix}setcmd [reply stiker]
+├ ${prefix}delcmd [reply stiker]
+├ ${prefix}listcmd
+├ ${prefix}absen
+├ ${prefix}cekabsen
+├ ${prefix}deleteabsen
+├ ${prefix}absenstart
+├ ${prefix}addmsg [nama file]
+├ ${prefix}getmsg [nama file]
+├ ${prefix}listmsg
+╰❒ ${prefix}delmsg [nama file]
 `}
 
 exports.group = (prefix) =>{
-	return`「 Group 」 
-𐁘. ${prefix}listonline
-𐁘. ${prefix}sider
-𐁘. ${prefix}wm packname|author
-𐁘. ${prefix}infochat
-𐁘. ${prefix}setdesk [text]
-𐁘. ${prefix}setppgrup [reply image]
-𐁘. ${prefix}antilink [on/off]
-𐁘. ${prefix}revoke
-𐁘. ${prefix}leave
-𐁘. ${prefix}add [62***]
-𐁘. ${prefix}kick @tag
-𐁘. ${prefix}leave
-𐁘. ${prefix}linkgc
-𐁘. ${prefix}take packname|author
-𐁘. ${prefix}group [open/close]
-𐁘. ${prefix}tagall [text]
-𐁘. ${prefix}hidetag [text]
+	return`╭─❒ 「 Group 」 
+├ ${prefix}listonline
+├ ${prefix}sider
+├ ${prefix}wm packname|author
+├ ${prefix}infochat
+├ ${prefix}setdesk [text]
+├ ${prefix}setppgrup [reply image]
+├ ${prefix}antilink [on/off]
+├ ${prefix}revoke
+├ ${prefix}leave
+├ ${prefix}add [62***]
+├ ${prefix}kick @tag
+├ ${prefix}leave
+├ ${prefix}linkgc
+├ ${prefix}take packname|author
+├ ${prefix}group [open/close]
+├ ${prefix}tagall [text]
+╰❒ ${prefix}hidetag [text]
 `}
 
 exports.anime = (prefix) =>{
-	return`「 Anime 」 
-𐁘. ${prefix}quotesanime
-𐁘. ${prefix}anime [query]
-𐁘. ${prefix}manga [query]
-𐁘. ${prefix}character [query]
+	return`╭─❒ 「 Anime 」 
+├ ${prefix}quotesanime
+├ ${prefix}anime [query]
+├ ${prefix}manga [query]
+╰❒ ${prefix}character [query]
 `}
 
 exports.tag = (prefix) =>{
-	return`「 Tag 」 
-𐁘. ${prefix}stickertag
-𐁘. ${prefix}videotag [query]
-𐁘. ${prefix}vntag [query]
-𐁘. ${prefix}imagetag [query]
+	return`╭─❒ 「 Tag 」 
+├ ${prefix}stickertag
+├ ${prefix}videotag [query]
+├ ${prefix}vntag [query]
+╰❒ ${prefix}imagetag [query]
 `}
 
 exports.stalk = (prefix) =>{
-	return`「 Stalking 」 
-𐁘. ${prefix}igstalk [username]
-𐁘. ${prefix}ghstalk [username]
-𐁘. ${prefix}ytstalk [channel]
+	return`╭─❒ 「 Stalking 」 
+├ ${prefix}igstalk [username]
+├ ${prefix}ghstalk [username]
+╰❒ ${prefix}ytstalk [channel]
 `}
 
 exports.search = (prefix) =>{
-	return`「 Search 」 
-𐁘. ${prefix}ytsearch [query]
-𐁘. ${prefix}wallpaper [query]
-𐁘. ${prefix}wikimedia [query]
-𐁘. ${prefix}wattpad [query]
-𐁘. ${prefix}webtoons [query]
-𐁘. ${prefix}drakor [query]
-𐁘. ${prefix}pinterest [query]
+	return`╭─❒ 「 Search 」 
+├ ${prefix}ytsearch [query]
+├ ${prefix}wallpaper [query]
+├ ${prefix}google [query]
+├ ${prefix}wikimedia [query]
+├ ${prefix}hentai
+├ ${prefix}wattpad [query]
+├ ${prefix}webtoons [query]
+├ ${prefix}drakor [query]
+╰❒ ${prefix}pinterest [query]
 `}
 
 exports.converter = (prefix) =>{
-	return`「 Converter 」 
-𐁘. ${prefix}toaudio [video]
-𐁘. ${prefix}tomp3 [video]
-𐁘. ${prefix}tovn [video]
-𐁘. ${prefix}stiker [reply image]
-𐁘. ${prefix}tourl [image/video]
-𐁘. ${prefix}togif [sticker]
-𐁘. ${prefix}tomp4 [sticker]
-𐁘. ${prefix}toimg [reply sticker]
+	return`╭─❒ 「 Converter 」 
+├ ${prefix}toaudio [video]
+├ ${prefix}tomp3 [video]
+├ ${prefix}tovn [video]
+├ ${prefix}stiker [reply image]
+├ ${prefix}tourl [image/video]
+├ ${prefix}togif [sticker]
+├ ${prefix}tomp4 [sticker]
+╰❒${prefix}toimg [reply sticker]
 `}
 
 exports.effect = (prefix) =>{
-	return`「 Image Effect 」 
-𐁘. ${prefix}wanted [reply image/stiker]
-𐁘. ${prefix}utatoo [reply image/stiker]
-𐁘. ${prefix}unsharpen [reply image/stiker]
-𐁘. ${prefix}thanos [reply image/stiker]
-𐁘. ${prefix}sniper [reply image/stiker]
-𐁘. ${prefix}sharpen [reply image/stiker]
-𐁘. ${prefix}sepia [reply image/stiker]
-𐁘. ${prefix}scary [reply image/stiker]
-𐁘. ${prefix}rip [reply image/stiker]
-𐁘. ${prefix}redple [reply image/stiker]
-𐁘. ${prefix}rejected [reply image/stiker]
-𐁘. ${prefix}posterize [reply image/stiker]
-𐁘. ${prefix}ps4 [reply image/stiker]
-𐁘. ${prefix}pixelize [reply image/stiker]
-𐁘. ${prefix}missionpassed [reply image/stiker]
-𐁘. ${prefix}moustache [reply image/stiker]
-𐁘. ${prefix}lookwhatkarenhave [reply image/stiker]
-𐁘. ${prefix}jail [reply image/stiker]
-𐁘. ${prefix}invert [reply image/stiker]
-𐁘. ${prefix}instagram [reply image/stiker]
-𐁘. ${prefix}greyscale [reply image/stiker]
-𐁘. ${prefix}glitch [reply image/stiker]
-𐁘. ${prefix}gay [reply image/stiker]
-𐁘. ${prefix}frame [reply image/stiker]
-𐁘. ${prefix}fire [reply image/stiker]
-𐁘. ${prefix}distort [reply image/stiker]
-𐁘. ${prefix}dictator [reply image/stiker]
-𐁘. ${prefix}deepfry [reply image/stiker]
-𐁘. ${prefix}ddungeon [reply image/stiker]
-𐁘. ${prefix}circle [reply image/stiker]
-𐁘. ${prefix}challenger [reply image/stiker]
-𐁘. ${prefix}burn [reply image/stiker]
-𐁘. ${prefix}brazzers [reply image/stiker]
-𐁘. ${prefix}beautiful [reply image/stiker]
+	return`╭─❒ 「 Image Effect 」 
+├ ${prefix}wanted [reply image/stiker]
+├ ${prefix}utatoo [reply image/stiker]
+├ ${prefix}unsharpen [reply image/stiker]
+├ ${prefix}thanos [reply image/stiker]
+├ ${prefix}sniper [reply image/stiker]
+├ ${prefix}sharpen [reply image/stiker]
+├ ${prefix}sepia [reply image/stiker]
+├ ${prefix}scary [reply image/stiker]
+├ ${prefix}rip [reply image/stiker]
+├ ${prefix}redple [reply image/stiker]
+├ ${prefix}rejected [reply image/stiker]
+├ ${prefix}posterize [reply image/stiker]
+├ ${prefix}ps4 [reply image/stiker]
+├ ${prefix}pixelize [reply image/stiker]
+├ ${prefix}missionpassed [reply image/stiker]
+├ ${prefix}moustache [reply image/stiker]
+├ ${prefix}lookwhatkarenhave [reply image/stiker]
+├ ${prefix}jail [reply image/stiker]
+├ ${prefix}invert [reply image/stiker]
+├ ${prefix}instagram [reply image/stiker]
+├ ${prefix}greyscale [reply image/stiker]
+├ ${prefix}glitch [reply image/stiker]
+├ ${prefix}gay [reply image/stiker]
+├ ${prefix}frame [reply image/stiker]
+├ ${prefix}fire [reply image/stiker]
+├ ${prefix}distort [reply image/stiker]
+├ ${prefix}dictator [reply image/stiker]
+├ ${prefix}deepfry [reply image/stiker]
+├ ${prefix}ddungeon [reply image/stiker]
+├ ${prefix}circle [reply image/stiker]
+├ ${prefix}challenger [reply image/stiker]
+├ ${prefix}burn [reply image/stiker]
+├ ${prefix}brazzers [reply image/stiker]
+╰❒ ${prefix}beautiful [reply image/stiker]
 `}
 
 //
 exports.effect2 = (prefix) =>{
-	return`「 Sticker Effect 」 
-𐁘. ${prefix}jail [reply image/stiker]
-𐁘. ${prefix}red [reply image/stiker]
-𐁘. ${prefix}gay [reply image/stiker]
-𐁘. ${prefix}bloo [reply image/stiker]
-𐁘. ${prefix}blue [reply image/stiker]
-𐁘. ${prefix}sepia [reply image/stiker]
-𐁘. ${prefix}green [reply image/stiker]
-𐁘. ${prefix}glass [reply image/stiker]
-𐁘. ${prefix}invert [reply image/stiker]
-𐁘. ${prefix}blurple [reply image/stiker]
-𐁘. ${prefix}blurple2 [reply image/stiker]
-𐁘. ${prefix}wasted [reply image/stiker]
-𐁘. ${prefix}passed [reply image/stiker]
-𐁘. ${prefix}triggered [reply image/stiker]
-𐁘. ${prefix}comrade [reply image/stiker]
-𐁘. ${prefix}greyscale [reply image/stiker]
-𐁘. ${prefix}threshold [reply image/stiker]
-𐁘. ${prefix}brightness [reply image/stiker]
-𐁘. ${prefix}invertgreyscale [reply image/stiker]
+	return`╭─❒ 「 Sticker Effect 」 
+├ ${prefix}jail [reply image/stiker]
+├ ${prefix}red [reply image/stiker]
+├ ${prefix}gay [reply image/stiker]
+├ ${prefix}bloo [reply image/stiker]
+├ ${prefix}blue [reply image/stiker]
+├ ${prefix}sepia [reply image/stiker]
+├ ${prefix}green [reply image/stiker]
+├ ${prefix}glass [reply image/stiker]
+├ ${prefix}invert [reply image/stiker]
+├ ${prefix}blurple [reply image/stiker]
+├ ${prefix}blurple2 [reply image/stiker]
+├ ${prefix}wasted [reply image/stiker]
+├ ${prefix}passed [reply image/stiker]
+├ ${prefix}triggered [reply image/stiker]
+├ ${prefix}comrade [reply image/stiker]
+├ ${prefix}greyscale [reply image/stiker]
+├ ${prefix}threshold [reply image/stiker]
+├ ${prefix}brightness [reply image/stiker]
+╰❒ ${prefix}invertgreyscale [reply image/stiker]
 `
 }
 
 exports.download = (prefix) =>{
-return`「 Download 」 
-𐁘. ${prefix}tiktok [link]
-𐁘. ${prefix}tiktoknowm [link]
-𐁘. ${prefix}tiktokwm [link]
-𐁘. ${prefix}tiktokaudio [link]
-𐁘. ${prefix}ytdl [link]
-𐁘. ${prefix}play [query]
-𐁘. ${prefix}ytmp3 [link]
-𐁘. ${prefix}ytshortmp3 [link]
-𐁘. ${prefix}ytmp4 [link]
-𐁘. ${prefix}ytshorts [link]
-𐁘. ${prefix}facebook [link]
-𐁘. ${prefix}facebooksd [link]
-𐁘. ${prefix}facebookhd [link]
-𐁘. ${prefix}fbaudio [link]
-𐁘. ${prefix}igstory [username]
-𐁘. ${prefix}igdl [link]
-𐁘. ${prefix}igphoto [link]
-𐁘. ${prefix}igvideo [link]
-𐁘. ${prefix}igreels [link]
-𐁘. ${prefix}igtv [link]
-𐁘. ${prefix}soundcloud [link]
-𐁘. ${prefix}gitclone [link repo]
-𐁘. ${prefix}gitrepo [username repo branch]
-𐁘. ${prefix}mediafire [link]
-𐁘. ${prefix}twitter link
+return`╭─❒ 「 Download 」 
+├ ${prefix}tiktok [link]
+├ ${prefix}tiktoknowm [link]
+├ ${prefix}tiktokwm [link]
+├ ${prefix}tiktokaudio [link]
+├ ${prefix}ytdl [link]
+├ ${prefix}play [query]
+├ ${prefix}ytmp3 [link]
+├ ${prefix}ytshortmp3 [link]
+├ ${prefix}ytmp4 [link]
+├ ${prefix}ytshorts [link]
+├ ${prefix}facebook [link]
+├ ${prefix}facebooksd [link]
+├ ${prefix}facebookhd [link]
+├ ${prefix}fbaudio [link]
+├ ${prefix}igstory [username]
+├ ${prefix}igdl [link]
+├ ${prefix}igphoto [link]
+├ ${prefix}igvideo [link]
+├ ${prefix}igreels [link]
+├ ${prefix}igtv [link]
+├ ${prefix}soundcloud [link]
+├ ${prefix}gitclone [link repo]
+├ ${prefix}gitrepo [username repo branch]
+├ ${prefix}mediafire [link]
+╰❒ ${prefix}twitter link
 `
 }
 
 exports.ranime = (prefix) =>{
-	return`「 Random Anime 」
-𐁘. ${prefix}loli
-𐁘. ${prefix}neko
-𐁘. ${prefix}waifu
-𐁘. ${prefix}shinobu
-𐁘. ${prefix}megumin
-𐁘. ${prefix}bully
-𐁘. ${prefix}cuddle
-𐁘. ${prefix}cry
-𐁘. ${prefix}hug
-𐁘. ${prefix}awoo
-𐁘. ${prefix}kiss
-𐁘. ${prefix}lick
-𐁘. ${prefix}pat
-𐁘. ${prefix}smug
-𐁘. ${prefix}bonk
-𐁘. ${prefix}yeet
-𐁘. ${prefix}blush
-𐁘. ${prefix}smile
-𐁘. ${prefix}wave
-𐁘. ${prefix}highfive
-𐁘. ${prefix}handhold
-𐁘. ${prefix}nom
-𐁘. ${prefix}bite
-𐁘. ${prefix}glomp
-𐁘. ${prefix}slap
-𐁘. ${prefix}kill
-𐁘. ${prefix}happy
-𐁘. ${prefix}wink
-𐁘. ${prefix}poke
-𐁘. ${prefix}dance
-𐁘. ${prefix}cringe
+	return`╭─❒ 「 Random Anime 」
+├ ${prefix}loli
+├ ${prefix}neko
+├ ${prefix}waifu
+├ ${prefix}shinobu
+├ ${prefix}megumin
+├ ${prefix}bully
+├ ${prefix}cuddle
+├ ${prefix}cry
+├ ${prefix}hug
+├ ${prefix}awoo
+├ ${prefix}kiss
+├ ${prefix}lick
+├ ${prefix}pat
+├ ${prefix}smug
+├ ${prefix}bonk
+├ ${prefix}yeet
+├ ${prefix}blush
+├ ${prefix}smile
+├ ${prefix}wave
+├ ${prefix}highfive
+├ ${prefix}handhold
+├ ${prefix}nom
+├ ${prefix}bite
+├ ${prefix}glomp
+├ ${prefix}slap
+├ ${prefix}kill
+├ ${prefix}happy
+├ ${prefix}wink
+├ ${prefix}poke
+├ ${prefix}dance
+╰❒ ${prefix}cringe
 `
 }
 
-exports.nsfw = () =>{
-	return` feature has been removed.
+exports.nsfw = (prefix) =>{
+	return`╭─❒ 「 Nsfw & Sfw 」
+├ ${prefix}ahegao
+├ ${prefix}ass
+├ ${prefix}bdsm
+├ ${prefix}blowjob
+├ ${prefix}cuckold
+├ ${prefix}cum
+├ ${prefix}ero
+├ ${prefix}femdom
+├ ${prefix}foot
+├ ${prefix}gangbang
+├ ${prefix}glasses
+├ ${prefix}jahy
+├ ${prefix}manga
+├ ${prefix}masturbation
+├ ${prefix}neko
+├ ${prefix}orgy
+├ ${prefix}panties
+├ ${prefix}pussy
+├ ${prefix}tentacles
+├ ${prefix}thighs
+├ ${prefix}yuri
+├ ${prefix}feet
+├ ${prefix}lewdkemo
+├ ${prefix}woof
+├ ${prefix}gasm
+├ ${prefix}solo
+├ ${prefix}8ball
+├ ${prefix}goose
+├ ${prefix}avatar
+├ ${prefix}hololewd
+├ ${prefix}gecg
+├ ${prefix}holo
+├ ${prefix}fox_girl
+├ ${prefix}tits
+├ ${prefix}eroyuri
+├ ${prefix}holoyero
+├ ${prefix}lizard
+├ ${prefix}keta
+├ ${prefix}eron
+├ ${prefix}erok
+├ ${prefix}kemonomimi
+├ ${prefix}cum_jpg
+├ ${prefix}nsfw_avatar
+├ ${prefix}erofeet
+├ ${prefix}meow
+├ ${prefix}wallpaper
+├ ${prefix}waifu
+├ ${prefix}trap
+├ ${prefix}lewd
+├ ${prefix}pussy_jpg
+├ ${prefix}futanari
+├ ${prefix}lewdk
+├ ${prefix}solog
+├ ${prefix}smug
+├ ${prefix}cum
+├ ${prefix}slap
+├ ${prefix}les
+├ ${prefix}erokemo
+├ ${prefix}bj
+├ ${prefix}pwankg
+├ ${prefix}pat
+├ ${prefix}poke
+├ ${prefix}feed
+├ ${prefix}nsfw_neko_gif
+├ ${prefix}pussy
+├ ${prefix}feetg
+├ ${prefix}baka
+├ ${prefix}hug
+├ ${prefix}kiss
+├ ${prefix}tickle
+├ ${prefix}spank
+├ ${prefix}kuni
+├ ${prefix}classic
+├ ${prefix}boobs
+├ ${prefix}anal
+├ ${prefix}ngif
+├ ${prefix}cuddle
+╰❒ ${prefix}zettai
 `
 }
 
 exports.textpro = (prefix) =>{
-	return`「 Textpro Menu 」
-𐁘. ${prefix}halloween2 text|text2
-𐁘. ${prefix}horror text|text2
-𐁘. ${prefix}game8bit text|text2
-𐁘. ${prefix}layered text|text2
-𐁘. ${prefix}glitch2 text|text2
-𐁘. ${prefix}coolg text|text2
-𐁘. ${prefix}coolwg text|text2
-𐁘. ${prefix}realistic text|text2
-𐁘. ${prefix}space3d text|text2
-𐁘. ${prefix}gtiktok text|text2
-𐁘. ${prefix}stone text|text2
-𐁘. ${prefix}marvel text|text2
-𐁘. ${prefix}marvel2 text|text2
-𐁘. ${prefix}pornhub text|text2
-𐁘. ${prefix}avengers text|text2
-𐁘. ${prefix}metalr text|text2
-𐁘. ${prefix}metalg text|text2
-𐁘. ${prefix}metalg2 text|text2
-𐁘. ${prefix}halloween2 text|text2
-𐁘. ${prefix}lion text|text2
-𐁘. ${prefix}wolf_bw text|text2
-𐁘. ${prefix}wolf_g text|text2
-𐁘. ${prefix}ninja text|text2
-𐁘. ${prefix}3dsteel text|text2
-𐁘. ${prefix}horror2 text|text2
-𐁘. ${prefix}lava text|text2
-𐁘. ${prefix}bagel text|text2
-𐁘. ${prefix}blackpink text
-𐁘. ${prefix}rainbow2 text
-𐁘. ${prefix}water_pipe text
-𐁘. ${prefix}halloween text
-𐁘. ${prefix}sketch text
-𐁘. ${prefix}sircuit text
-𐁘. ${prefix}discovery text
-𐁘. ${prefix}metallic2 text
-𐁘. ${prefix}fiction text
-𐁘. ${prefix}demon text
-𐁘. ${prefix}transformer text
-𐁘. ${prefix}berry text
-𐁘. ${prefix}thunder text
-𐁘. ${prefix}magma text
-𐁘. ${prefix}3dstone text
-𐁘. ${prefix}neon text
-𐁘. ${prefix}glitch text
-𐁘. ${prefix}harry_potter text
-𐁘. ${prefix}embossed text
-𐁘. ${prefix}broken text
-𐁘. ${prefix}papercut text
-𐁘. ${prefix}gradient text
-𐁘. ${prefix}glossy text
-𐁘. ${prefix}watercolor text
-𐁘. ${prefix}multicolor text
-𐁘. ${prefix}neon_devil text
-𐁘. ${prefix}underwater text
-𐁘. ${prefix}bear text
-𐁘. ${prefix}wonderfulg text
-𐁘. ${prefix}christmas text
-𐁘. ${prefix}neon_light text
-𐁘. ${prefix}snow text
-𐁘. ${prefix}cloudsky text
-𐁘. ${prefix}luxury2 text
-𐁘. ${prefix}gradient2 text
-𐁘. ${prefix}summer text
-𐁘. ${prefix}writing text
-𐁘. ${prefix}engraved text
-𐁘. ${prefix}summery text
-𐁘. ${prefix}3dglue text
-𐁘. ${prefix}metaldark text
-𐁘. ${prefix}neonlight text
-𐁘. ${prefix}oscar text
-𐁘. ${prefix}minion text
-𐁘. ${prefix}holographic text
-𐁘. ${prefix}purple text
-𐁘. ${prefix}glossyb text
-𐁘. ${prefix}deluxe2 text
-𐁘. ${prefix}glossyc text
-𐁘. ${prefix}fabric text
-𐁘. ${prefix}neonc text
-𐁘. ${prefix}newyear text
-𐁘. ${prefix}newyear2 text
-𐁘. ${prefix}metals text
-𐁘. ${prefix}xmas text
-𐁘. ${prefix}blood text
-𐁘. ${prefix}darkg text
-𐁘. ${prefix}joker text
-𐁘. ${prefix}wicker text
-𐁘. ${prefix}natural text
-𐁘. ${prefix}firework text
-𐁘. ${prefix}skeleton text
-𐁘. ${prefix}balloon text
-𐁘. ${prefix}balloon2 text
-𐁘. ${prefix}balloon3 text
-𐁘. ${prefix}balloon4 text
-𐁘. ${prefix}balloon5 text
-𐁘. ${prefix}balloon6 text
-𐁘. ${prefix}balloon7 text
-𐁘. ${prefix}steel text
-𐁘. ${prefix}gloss text
-𐁘. ${prefix}denim text
-𐁘. ${prefix}decorate text
-𐁘. ${prefix}decorate2 text
-𐁘. ${prefix}peridot text
-𐁘. ${prefix}rock text
-𐁘. ${prefix}glass text
-𐁘. ${prefix}glass2 text
-𐁘. ${prefix}glass3 text
-𐁘. ${prefix}glass4 text
-𐁘. ${prefix}glass5 text
-𐁘. ${prefix}glass6 text
-𐁘. ${prefix}glass7 text
-𐁘. ${prefix}glass8 text
-𐁘. ${prefix}captain_as2 text
-𐁘. ${prefix}robot text
-𐁘. ${prefix}equalizer text
-𐁘. ${prefix}toxic text
-𐁘. ${prefix}sparkling text
-𐁘. ${prefix}sparkling2 text
-𐁘. ${prefix}sparkling3 text
-𐁘. ${prefix}sparkling4 text
-𐁘. ${prefix}sparkling5 text
-𐁘. ${prefix}sparkling6 text
-𐁘. ${prefix}sparkling7 text
-𐁘. ${prefix}decorative text
-𐁘. ${prefix}chocolate text
-𐁘. ${prefix}strawberry text
-𐁘. ${prefix}koifish text
-𐁘. ${prefix}bread text
-𐁘. ${prefix}matrix text
-𐁘. ${prefix}blood2 text
-𐁘. ${prefix}neonligth2 text
-𐁘. ${prefix}thunder2 text
-𐁘. ${prefix}3dbox text
-𐁘. ${prefix}neon2 text
-𐁘. ${prefix}roadw text
-𐁘. ${prefix}bokeh text
-𐁘. ${prefix}gneon text
-𐁘. ${prefix}advanced text
-𐁘. ${prefix}dropwater text
-𐁘. ${prefix}wall text
-𐁘. ${prefix}chrismast text
-𐁘. ${prefix}honey text
-𐁘. ${prefix}drug text
-𐁘. ${prefix}marble text
-𐁘. ${prefix}marble2 text
-𐁘. ${prefix}ice text
-𐁘. ${prefix}juice text
-𐁘. ${prefix}rusty text
-𐁘. ${prefix}abstra text
-𐁘. ${prefix}biscuit text
-𐁘. ${prefix}wood text
-𐁘. ${prefix}scifi text
-𐁘. ${prefix}metalr text
-𐁘. ${prefix}purpleg text
-𐁘. ${prefix}shiny text 
-𐁘. ${prefix}jewelry text
-𐁘. ${prefix}jewelry2 text
-𐁘. ${prefix}jewelry3 text
-𐁘. ${prefix}jewelry4 text
-𐁘. ${prefix}jewelry5 text
-𐁘. ${prefix}jewelry6 text
-𐁘. ${prefix}jewelry7 text
-𐁘. ${prefix}jewelry8 text
-𐁘. ${prefix}metalh text
-𐁘. ${prefix}golden text
-𐁘. ${prefix}glitter text
-𐁘. ${prefix}glitter2 text
-𐁘. ${prefix}glitter3 text
-𐁘. ${prefix}glitter4 text
-𐁘. ${prefix}glitter5 text
-𐁘. ${prefix}glitter6 text
-𐁘. ${prefix}glitter7 text
-𐁘. ${prefix}metale text
-𐁘. ${prefix}carbon text
-𐁘. ${prefix}candy text
-𐁘. ${prefix}metalb text
-𐁘. ${prefix}gemb text
-𐁘. ${prefix}3dchrome text
-𐁘. ${prefix}metalb2 text
-𐁘. ${prefix}metalg text
-𐁘. ${prefix}metalg text
+	return`╭─❒ 「 Textpro Menu 」
+├ ${prefix}halloween2 text|text2
+├ ${prefix}horror text|text2
+├ ${prefix}game8bit text|text2
+├ ${prefix}layered text|text2
+├ ${prefix}glitch2 text|text2
+├ ${prefix}coolg text|text2
+├ ${prefix}coolwg text|text2
+├ ${prefix}realistic text|text2
+├ ${prefix}space3d text|text2
+├ ${prefix}gtiktok text|text2
+├ ${prefix}stone text|text2
+├ ${prefix}marvel text|text2
+├ ${prefix}marvel2 text|text2
+├ ${prefix}pornhub text|text2
+├ ${prefix}avengers text|text2
+├ ${prefix}metalr text|text2
+├ ${prefix}metalg text|text2
+├ ${prefix}metalg2 text|text2
+├ ${prefix}halloween2 text|text2
+├ ${prefix}lion text|text2
+├ ${prefix}wolf_bw text|text2
+├ ${prefix}wolf_g text|text2
+├ ${prefix}ninja text|text2
+├ ${prefix}3dsteel text|text2
+├ ${prefix}horror2 text|text2
+├ ${prefix}lava text|text2
+├ ${prefix}bagel text|text2
+├ ${prefix}blackpink text
+├ ${prefix}rainbow2 text
+├ ${prefix}water_pipe text
+├ ${prefix}halloween text
+├ ${prefix}sketch text
+├ ${prefix}sircuit text
+├ ${prefix}discovery text
+├ ${prefix}metallic2 text
+├ ${prefix}fiction text
+├ ${prefix}demon text
+├ ${prefix}transformer text
+├ ${prefix}berry text
+├ ${prefix}thunder text
+├ ${prefix}magma text
+├ ${prefix}3dstone text
+├ ${prefix}neon text
+├ ${prefix}glitch text
+├ ${prefix}harry_potter text
+├ ${prefix}embossed text
+├ ${prefix}broken text
+├ ${prefix}papercut text
+├ ${prefix}gradient text
+├ ${prefix}glossy text
+├ ${prefix}watercolor text
+├ ${prefix}multicolor text
+├ ${prefix}neon_devil text
+├ ${prefix}underwater text
+├ ${prefix}bear text
+├ ${prefix}wonderfulg text
+├ ${prefix}christmas text
+├ ${prefix}neon_light text
+├ ${prefix}snow text
+├ ${prefix}cloudsky text
+├ ${prefix}luxury2 text
+├ ${prefix}gradient2 text
+├ ${prefix}summer text
+├ ${prefix}writing text
+├ ${prefix}engraved text
+├ ${prefix}summery text
+├ ${prefix}3dglue text
+├ ${prefix}metaldark text
+├ ${prefix}neonlight text
+├ ${prefix}oscar text
+├ ${prefix}minion text
+├ ${prefix}holographic text
+├ ${prefix}purple text
+├ ${prefix}glossyb text
+├ ${prefix}deluxe2 text
+├ ${prefix}glossyc text
+├ ${prefix}fabric text
+├ ${prefix}neonc text
+├ ${prefix}newyear text
+├ ${prefix}newyear2 text
+├ ${prefix}metals text
+├ ${prefix}xmas text
+├ ${prefix}blood text
+├ ${prefix}darkg text
+├ ${prefix}joker text
+├ ${prefix}wicker text
+├ ${prefix}natural text
+├ ${prefix}firework text
+├ ${prefix}skeleton text
+├ ${prefix}balloon text
+├ ${prefix}balloon2 text
+├ ${prefix}balloon3 text
+├ ${prefix}balloon4 text
+├ ${prefix}balloon5 text
+├ ${prefix}balloon6 text
+├ ${prefix}balloon7 text
+├ ${prefix}steel text
+├ ${prefix}gloss text
+├ ${prefix}denim text
+├ ${prefix}decorate text
+├ ${prefix}decorate2 text
+├ ${prefix}peridot text
+├ ${prefix}rock text
+├ ${prefix}glass text
+├ ${prefix}glass2 text
+├ ${prefix}glass3 text
+├ ${prefix}glass4 text
+├ ${prefix}glass5 text
+├ ${prefix}glass6 text
+├ ${prefix}glass7 text
+├ ${prefix}glass8 text
+├ ${prefix}captain_as2 text
+├ ${prefix}robot text
+├ ${prefix}equalizer text
+├ ${prefix}toxic text
+├ ${prefix}sparkling text
+├ ${prefix}sparkling2 text
+├ ${prefix}sparkling3 text
+├ ${prefix}sparkling4 text
+├ ${prefix}sparkling5 text
+├ ${prefix}sparkling6 text
+├ ${prefix}sparkling7 text
+├ ${prefix}decorative text
+├ ${prefix}chocolate text
+├ ${prefix}strawberry text
+├ ${prefix}koifish text
+├ ${prefix}bread text
+├ ${prefix}matrix text
+├ ${prefix}blood2 text
+├ ${prefix}neonligth2 text
+├ ${prefix}thunder2 text
+├ ${prefix}3dbox text
+├ ${prefix}neon2 text
+├ ${prefix}roadw text
+├ ${prefix}bokeh text
+├ ${prefix}gneon text
+├ ${prefix}advanced text
+├ ${prefix}dropwater text
+├ ${prefix}wall text
+├ ${prefix}chrismast text
+├ ${prefix}honey text
+├ ${prefix}drug text
+├ ${prefix}marble text
+├ ${prefix}marble2 text
+├ ${prefix}ice text
+├ ${prefix}juice text
+├ ${prefix}rusty text
+├ ${prefix}abstra text
+├ ${prefix}biscuit text
+├ ${prefix}wood text
+├ ${prefix}scifi text
+├ ${prefix}metalr text
+├ ${prefix}purpleg text
+├ ${prefix}shiny text 
+├ ${prefix}jewelry text
+├ ${prefix}jewelry2 text
+├ ${prefix}jewelry3 text
+├ ${prefix}jewelry4 text
+├ ${prefix}jewelry5 text
+├ ${prefix}jewelry6 text
+├ ${prefix}jewelry7 text
+├ ${prefix}jewelry8 text
+├ ${prefix}metalh text
+├ ${prefix}golden text
+├ ${prefix}glitter text
+├ ${prefix}glitter2 text
+├ ${prefix}glitter3 text
+├ ${prefix}glitter4 text
+├ ${prefix}glitter5 text
+├ ${prefix}glitter6 text
+├ ${prefix}glitter7 text
+├ ${prefix}metale text
+├ ${prefix}carbon text
+├ ${prefix}candy text
+├ ${prefix}metalb text
+├ ${prefix}gemb text
+├ ${prefix}3dchrome text
+├ ${prefix}metalb2 text
+├ ${prefix}metalg text
+╰❒ ${prefix}metalg text
 `
 }
+
 
 exports.other = (prefix) =>{
-return`「 Others 」
-𐁘. ${prefix}ttp [text]
-𐁘. ${prefix}attp [text]
-𐁘. ${prefix}afk [reason]
-𐁘. ${prefix}translate kode_bahasa text
-𐁘. ${prefix}kalkulator [query]
-𐁘. ${prefix}smeme [text]
-𐁘. ${prefix}smeme2 [text|text]
-𐁘. ${prefix}memegen [text|text]
+return`╭─❒ 「 Others 」
+├ ${prefix}ttp [text]
+├ ${prefix}attp [text]
+├ ${prefix}afk [reason]
+├ ${prefix}translate kode_bahasa text
+├ ${prefix}kalkulator [query]
+├ ${prefix}smeme [text]
+├ ${prefix}smeme2 [text|text]
+╰❒ ${prefix}memegen [text|text]
 `
 }
-
 exports.game = (prefix) =>{
-return`「 Game Menu 」
-𐁘. ${prefix}kuismath
-𐁘. ${prefix}tebak [option]
-𐁘. ${prefix}tekateki
-𐁘. ${prefix}susunkata
-𐁘. ${prefix}caklontong
+return`╭─❒ 「 Game Menu 」
+├ ${prefix}kuismath
+├ ${prefix}tebak [option]
+├ ${prefix}tekateki
+├ ${prefix}susunkata
+╰❒ ${prefix}caklontong
 `
 }
-
-exports.asupan = () =>{
-return` feature has been removed.
+exports.asupan = (prefix) =>{
+return`╭─❒ 「 Asupan Menu 」
+├ ${prefix}chika
+├ ${prefix}delvira
+├ ${prefix}ayu
+├ ${prefix}bunga
+├ ${prefix}aura
+├ ${prefix}nisa
+├ ${prefix}ziva
+├ ${prefix}yana
+├ ${prefix}viona
+├ ${prefix}syania
+├ ${prefix}riri
+├ ${prefix}syifa
+├ ${prefix}mama_gina
+├ ${prefix}alcakenya
+├ ${prefix}mangayutri
+├ ${prefix}rikagusriani
+├ ${prefix}asupan
+├ ${prefix}bocil
+├ ${prefix}geayubi
+├ ${prefix}santuy
+├ ${prefix}ukhty
+╰❒ ${prefix}syifa
 `
 }
-
-exports.cecan = () =>{
-return` feature has been removed.
+exports.cecan = (prefix) =>{
+return`╭─❒ 「 Random Cewe 」
+├ ${prefix}china 
+├ ${prefix}indonesia 
+├ ${prefix}malaysia 
+├ ${prefix}thailand 
+├ ${prefix}korea 
+├ ${prefix}japan 
+├ ${prefix}vietnam 
+├ ${prefix}jenni 
+├ ${prefix}jiso 
+├ ${prefix}lisa  
+╰❒ ${prefix}rose
 `
 }
 
 exports.tqto = () =>{
-	return`「 TqTo 」 
-My waifu and nothing elsee
+	return`╭─❒ 「 TqTo 」 
+├ My God
+├ My Parents
+├ Fatih A.
+├ Ferdi
+├ DikaArdnt
+├ Mhankbarbar
+├ Nurutomo
+├ Rashid
+├ ZeeoneOfc
+├ Penyedia Module
+╰❒ And All Support
 `
 }
 
 exports.primbonmenu = (prefix) =>{
-	return`「 Primbon 」
-𐁘. ${prefix}nomorhoki 887435047326
-𐁘. ${prefix}artimimpi [query]
-𐁘. ${prefix}artinama [query]
-𐁘. ${prefix}ramaljodoh
-𐁘. ${prefix}ramaljodohbali
-𐁘. ${prefix}suamiistri
-𐁘. ${prefix}ramalcinta
-𐁘. ${prefix}cocoknama
-𐁘. ${prefix}pasangan
-𐁘. ${prefix}jadiannikah
-𐁘. ${prefix}sifatusaha
-𐁘. ${prefix}rezeki
-𐁘. ${prefix}pekerjaan
-𐁘. ${prefix}nasib
-𐁘. ${prefix}penyakit
-𐁘. ${prefix}tarot
-𐁘. ${prefix}fengshui
-𐁘. ${prefix}haribaik
-𐁘. ${prefix}harisangar
-𐁘. ${prefix}harisial
-𐁘. ${prefix}nagahari
-𐁘. ${prefix}arahrezeki
-𐁘. ${prefix}peruntungan
-𐁘. ${prefix}weton
-𐁘. ${prefix}karakter
-𐁘. ${prefix}keberuntungan
-𐁘. ${prefix}memancing
-𐁘. ${prefix}masasubur
-𐁘. ${prefix}zodiak 
-𐁘. ${prefix}shio [query]
+	return`╭─❒ 「 Primbon 」
+├ ${prefix}nomorhoki 887435047326
+├ ${prefix}artimimpi [query]
+├ ${prefix}artinama [query]
+├ ${prefix}ramaljodoh
+├ ${prefix}ramaljodohbali
+├ ${prefix}suamiistri
+├ ${prefix}ramalcinta
+├ ${prefix}cocoknama
+├ ${prefix}pasangan
+├ ${prefix}jadiannikah
+├ ${prefix}sifatusaha
+├ ${prefix}rezeki
+├ ${prefix}pekerjaan
+├ ${prefix}nasib
+├ ${prefix}penyakit
+├ ${prefix}tarot
+├ ${prefix}fengshui
+├ ${prefix}haribaik
+├ ${prefix}harisangar
+├ ${prefix}harisial
+├ ${prefix}nagahari
+├ ${prefix}arahrezeki
+├ ${prefix}peruntungan
+├ ${prefix}weton
+├ ${prefix}karakter
+├ ${prefix}keberuntungan
+├ ${prefix}memancing
+├ ${prefix}masasubur
+├ ${prefix}zodiak 
+╰❒ ${prefix}shio [query]
 `
 }
 
 exports.stcmenu = (prefix) =>{
-	return`「 Telegram Sticker 」
-𐁘. ${prefix}awoawo
-𐁘. ${prefix}benedict
-𐁘. ${prefix}chat
-𐁘. ${prefix}dbfly
-𐁘. ${prefix}dino_kuning
-𐁘. ${prefix}doge
-𐁘. ${prefix}gojosatoru
-𐁘. ${prefix}hope_boy
-𐁘. ${prefix}jisoo
-𐁘. ${prefix}kr_robot
-𐁘. ${prefix}kucing
-𐁘. ${prefix}manusia_lidi
-𐁘. ${prefix}menjamet
-𐁘. ${prefix}meow
-𐁘. ${prefix}nicholas
-𐁘. ${prefix}patrick
-𐁘. ${prefix}popoci
-𐁘. ${prefix}sponsbob
-𐁘. ${prefix}kawan_sponsbob
-𐁘. ${prefix}tyni
+	return`╭─❒ 「 Telegram Sticker 」
+├ ${prefix}awoawo
+├ ${prefix}benedict
+├ ${prefix}chat
+├ ${prefix}dbfly
+├ ${prefix}dino_kuning
+├ ${prefix}doge
+├ ${prefix}gojosatoru
+├ ${prefix}hope_boy
+├ ${prefix}jisoo
+├ ${prefix}kr_robot
+├ ${prefix}kucing
+├ ${prefix}lonte
+├ ${prefix}manusia_lidi
+├ ${prefix}menjamet
+├ ${prefix}meow
+├ ${prefix}nicholas
+├ ${prefix}patrick
+├ ${prefix}popoci
+├ ${prefix}sponsbob
+├ ${prefix}kawan_sponsbob
+╰❒ ${prefix}tyni
 `}
+
+exports.ephotomenu = (prefix) =>{
+	return`╭─❒ 「 Ephoto360 Menu 」
+├ ${prefix}youtubegold text
+├ ${prefix}youtubesilver text
+├ ${prefix}facebookgold text
+├ ${prefix}facebooksilver text
+├ ${prefix}instagramgold text
+├ ${prefix}instagramsilver text
+├ ${prefix}twittergold text
+├ ${prefix}twittersilver text
+├ ${prefix}retrotext text
+├ ${prefix}halloweenbats text
+├ ${prefix}texthalloween text
+├ ${prefix}cardhalloween text
+├ ${prefix}birthdaycake text
+├ ${prefix}thundertext text
+├ ${prefix}icetext text
+├ ${prefix}milkcake text
+├ ${prefix}snowontext text
+├ ${prefix}metalstar text
+├ ${prefix}dragonfire text
+├ ${prefix}zombie3d text
+├ ${prefix}merrycard text
+├ ${prefix}generalexam text 
+├ ${prefix}viettel text
+├ ${prefix}embroider text
+├ ${prefix}graffititext text
+├ ${prefix}graffititext2 text
+├ ${prefix}graffititext3 text
+├ ${prefix}covergraffiti text
+├ ${prefix}moderngold text
+├ ${prefix}capercut text
+├ ${prefix}lovecard text
+├ ${prefix}heartflashlight text
+├ ${prefix}heartcup text
+├ ${prefix}sunglightshadow text
+├ ${prefix}graffiti3d text
+├ ${prefix}moderngoldsilver text
+├ ${prefix}moderngold2 text
+├ ${prefix}moderngold3 text
+├ ${prefix}fabrictext text
+├ ${prefix}masteryavatar text
+├ ${prefix}messagecoffee text
+├ ${prefix}announofwin text
+├ ${prefix}writeblood text
+├ ${prefix}horrorletter text
+├ ${prefix}writehorror text
+├ ${prefix}shirtclub text
+├ ${prefix}angelwing text
+├ ${prefix}christmasseason text
+├ ${prefix}projectyasuo text
+├ ${prefix}lovelycute text
+├ ${prefix}womansday text
+├ ${prefix}covergamepubg text
+├ ${prefix}nameonheart text
+├ ${prefix}funnyhalloween text
+├ ${prefix}lightningpubg text
+├ ${prefix}greetingcardvideo text 
+├ ${prefix}christmascard text 
+├ ${prefix}galaxybat text
+├ ${prefix}writegalaxy text
+├ ${prefix}starsnight text
+├ ${prefix}noeltext text
+├ ${prefix}textcakes text
+├ ${prefix}pubgbirthday text
+├ ${prefix}galaxywallpaper text
+├ ${prefix}pubgglicthvideo text 
+├ ${prefix}pubgmascotlogo text
+├ ${prefix}realembroidery text
+├ ${prefix}vintagetelevision text
+├ ${prefix}funnyanimations text
+├ ${prefix}glowingtext text
+├ ${prefix}textonglass text
+├ ${prefix}cartoonstyle text
+├ ${prefix}multicolor text
+├ ${prefix}watercolor2 text
+├ ${prefix}textsky text
+├ ${prefix}summerbeach text
+├ ${prefix}1917text text
+├ ${prefix}puppycute text
+├ ${prefix}rosebirthday text
+├ ${prefix}steellettering text|text2
+├ ${prefix}letterstext text|text2
+├ ${prefix}barcashirt text|text2
+├ ${prefix}premiercup text|text2
+├ ${prefix}stylepoligon text|text2
+├ ${prefix}lifebuoys text|text2
+╰❒ ${prefix}juventusshirt text|text2`
+}
+
+exports.logomenu = (prefix) =>{
+	return`╭─❒ 「 Logo Menu 」
+├ ${prefix}coverbannerlol text|heroes
+├ ${prefix}pubglogomaker text|style
+├ ${prefix}colorfulpubg text|color
+├ ${prefix}astronotspace text|style
+├ ${prefix}wallpaperaov text|heroes
+├ ${prefix}maketeamlogo text|style
+├ ${prefix}circlemarcotteam text|logo
+├ ${prefix}wallpaperml text|heroes
+├ ${prefix}dragonballfb text|character
+├ ${prefix}bannerofaov text|character
+├ ${prefix}effect3donbeach text|background
+├ ${prefix}cutegirlgamer text|logo
+├ ${prefix}footballteam text|logo
+├ ${prefix}beautifulshimmering text|champion
+├ ${prefix}pubgcutelogo text|logo
+├ ${prefix}elegantrotation text|logo
+├ ${prefix}logogamingassasin text|logo
+├ ${prefix}introvideomaker text|logo
+├ ${prefix}gaminglogo4fvs text|logo
+├ ${prefix}blueneon text|logo
+├ ${prefix}metalmascot text|logo
+├ ${prefix}anonymous2 text|style
+├ ${prefix}lolpentakill text|style
+├ ${prefix}avatarleagueofking text|style
+├ ${prefix}avatarff text|character
+├ ${prefix}overwatchwallpaper text|character
+├ ${prefix}rovwallpaperhd text|hero
+├ ${prefix}rovwallpaper text|avatar
+├ ${prefix}beautifulgalaxylol text|style
+├ ${prefix}crossfirecover text|character
+├ ${prefix}lolwallpaper text|wallpaper
+├ ${prefix}coverdota2 text|heroes
+├ ${prefix}coverleagueofking text|character
+├ ${prefix}avatar3q360 text|avatar
+├ ${prefix}coverofwarface text|character
+├ ${prefix}newlolavatar text|avatar
+├ ${prefix}csgocover text|background
+├ ${prefix}coverloknew text|hero
+├ ${prefix}coverfblol text|letters
+├ ${prefix}overwatchcover text|hero
+├ ${prefix}crossfirestyle text|avatar
+├ ${prefix}avatarlolbyname text|style
+├ ${prefix}lolcoverbyname text|avatar
+├ ${prefix}cyberhunterfb text|character
+├ ${prefix}coverfreefirefb text|character
+├ ${prefix}gamingmascot text|style
+├ ${prefix}coveronepiecefb text|character
+├ ${prefix}bannerytcsgo text|banner
+├ ${prefix}fbgamepubgcover text|template
+├ ${prefix}banneroflol text|text2|banner
+├ ${prefix}bannerofaov2 text|text2|banner
+├ ${prefix}teamlogo text|text2|background
+├ ${prefix}companylogo2 text|text2|background
+├ ${prefix}companylogo text|text2|background
+├ ${prefix}gradientlogo text|text2|background
+├ ${prefix}pencilsketch text|text2|icon
+├ ${prefix}gunlogogaming text|text2|background
+├ ${prefix}banneroffreefire text|text2|background
+├ ${prefix}letterlogos text|text2|thumb
+├ ${prefix}bannerofoverwatch text|text2|background
+├ ${prefix}bannerofapex text|text2|background
+├ ${prefix}bannerofpubg text|text2|background
+├ ${prefix}mascotstyle text|text2|thumb
+├ ${prefix}logoaccording text|text2|thumb
+╰❒ ${prefix}avataroverwatch text|text2|thumb
+`
+}
+
+exports.islammenu = (prefix) =>{
+	return`╭─❒ 「 Islamic Menu 」
+├ ${prefix}asmaulhusna
+├ ${prefix}kisahnabi [nabi]
+├ ${prefix}jadwalshalat [daerah]
+├ ${prefix}randomquran
+├ ${prefix}randomquran2
+├ ${prefix}listsurah
+├ ${prefix}tafsirsurah [surah]
+╰❒ ${prefix}alquranaudio [surah|ayat]
+`
+}
+exports.anonchat = (prefix) =>{
+	return`╭─❒ 「 Anonymous 」
+├ ${prefix}anonymous 
+├ ${prefix}start
+├ ${prefix}skip [daerah]
+╰❒ ${prefix}stop [surah|ayat]
+`
+}
+
+exports.storemenu = (prefix) =>{
+	return`╭─❒ 「 Store Menu 」
+├ ${prefix}list
+├ ${prefix}addlist [key|respond]
+├ ${prefix}dellist [key]
+├ ${prefix}update [key|respond]
+├ ${prefix}store
+├ ${prefix}kali
+├ ${prefix}bagi
+├ ${prefix}tambah
+├ ${prefix}kurang
+├ ${prefix}kalkulator
+├ ${prefix}proses
+╰❒ ${prefix}done
+`
+}
+
+
+exports.soundmenu = (prefix) =>{
+return`╭─❒ 「 Sound Menu 」
+├ ${prefix}sound1
+├ ${prefix}sound2
+├ ${prefix}sound3
+├ ${prefix}sound4
+├ ${prefix}sound5
+├ ${prefix}sound6
+├ ${prefix}sound7
+├ ${prefix}sound8
+├ ${prefix}sound9
+├ ${prefix}sound10
+├ ${prefix}sound11
+├ ${prefix}sound12
+├ ${prefix}sound13
+├ ${prefix}sound14
+├ ${prefix}sound15
+├ ${prefix}sound16
+├ ${prefix}sound17
+├ ${prefix}sound18 
+├ ${prefix}sound19
+├ ${prefix}sound20
+├ ${prefix}sound21
+├ ${prefix}sound22
+├ ${prefix}sound23
+├ ${prefix}sound24
+├ ${prefix}sound25
+├ ${prefix}sound26
+├ ${prefix}sound27
+├ ${prefix}sound28
+├ ${prefix}sound29
+├ ${prefix}sound30
+├ ${prefix}sound31
+├ ${prefix}sound32
+├ ${prefix}sound33
+├ ${prefix}sound34
+├ ${prefix}sound35
+├ ${prefix}sound36
+├ ${prefix}sound37
+├ ${prefix}sound38
+├ ${prefix}sound39
+├ ${prefix}sound40
+├ ${prefix}sound41
+├ ${prefix}sound42
+├ ${prefix}sound43
+├ ${prefix}sound44
+├ ${prefix}sound45
+├ ${prefix}sound46
+├ ${prefix}sound47
+├ ${prefix}sound48
+├ ${prefix}sound49
+├ ${prefix}sound50
+├ ${prefix}sound51
+├ ${prefix}sound52
+├ ${prefix}sound53
+├ ${prefix}sound54
+├ ${prefix}sound55
+├ ${prefix}sound56
+├ ${prefix}sound57
+├ ${prefix}sound58
+├ ${prefix}sound59
+├ ${prefix}sound60
+├ ${prefix}sound61
+├ ${prefix}sound62
+├ ${prefix}sound63
+├ ${prefix}sound64
+├ ${prefix}sound65
+├ ${prefix}sound66
+├ ${prefix}sound67
+├ ${prefix}sound68
+├ ${prefix}sound69
+╰❒ ${prefix}sound70
+`
+}
